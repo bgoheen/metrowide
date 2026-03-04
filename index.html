@@ -83,7 +83,6 @@ button{font-family:inherit;cursor:pointer;border:none}
 .review-card blockquote{color:var(--text-on-dark);font-size:.95rem;line-height:1.6;margin-bottom:1rem;font-style:italic}
 .review-footer{display:flex;align-items:center;gap:.75rem}
 .review-photo{width:44px;height:44px;border-radius:50%;object-fit:cover;flex-shrink:0}
-.review-photo-placeholder{width:44px;height:44px;border-radius:50%;background:rgba(125,249,255,.15);color:var(--cyan);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;flex-shrink:0}
 .review-author{font-weight:600;font-size:.85rem;color:var(--white)}
 .review-location{font-size:.8rem;color:#8899AA}
 .services{padding:var(--section-pad) 0;background:var(--off-white)}
@@ -138,7 +137,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 @media(min-width:769px) and (max-width:1024px){.reviews-grid{grid-template-columns:1fr 1fr}}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"Metrowide Appraisals","description":"Residential home appraisals in Minneapolis and Saint Paul for divorce, estate settlement, tax appeals, PMI removal, and real estate decisions.","url":"https://metrowide.co","telephone":"+1-651-505-4400","email":"hello@metrowide.co","address":{"@type":"PostalAddress","addressLocality":"Saint Paul","addressRegion":"MN","addressCountry":"US"},"areaServed":{"@type":"Place","name":"Minneapolis-Saint Paul metropolitan area"},"priceRange":"$$","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"56","bestRating":"5"},"openingHours":"Mo-Fr 08:00-18:00"}
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Metrowide Appraisals","description":"Residential home appraisals in Minneapolis and Saint Paul for divorce, estate settlement, tax appeals, PMI removal, and real estate decisions.","url":"https://metrowide.co","telephone":"+1-651-505-4400","address":{"@type":"PostalAddress","addressLocality":"Saint Paul","addressRegion":"MN","addressCountry":"US"},"areaServed":{"@type":"Place","name":"Minneapolis-Saint Paul metropolitan area"},"priceRange":"$$","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"56","bestRating":"5"},"openingHours":"Mo-Fr 08:00-18:00"}
 </script>
 </head>
 <body>
@@ -246,11 +245,11 @@ button{font-family:inherit;cursor:pointer;border:none}
 </div></section>
 
 <footer class="footer"><div class="wrap"><div class="footer-inner">
-<div class="footer-left">&copy; 2026 Metrowide Appraisals. All rights reserved.<br><a href="tel:6515054400">(651) 505-4400</a> &middot; <a href="/cdn-cgi/l/email-protection#3c54595050531a1f0a08075159484e534b555859125f53">hello&#64;metrowide.co</a></div>
+<div class="footer-left">&copy; 2026 Metrowide Appraisals. All rights reserved.<br><a href="tel:6515054400">(651) 505-4400</a> &middot; <a href="mailto:hello&#64;metrowide.co">hello&#64;metrowide.co</a></div>
 <div class="footer-right"><a href="/about">About</a><a href="/blog">Blog</a><a href="/privacy">Privacy Policy</a></div>
 </div></div></footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (function(){
   var nav=document.getElementById('nav');
   window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>20)},{passive:true});
@@ -268,4 +267,11 @@ button{font-family:inherit;cursor:pointer;border:none}
       var item=this.parentElement;
       var wasOpen=item.classList.contains('open');
       var allItems=document.querySelectorAll('.faq-item');
-      for(var k=0
+      for(var k=0;k<allItems.length;k++){allItems[k].classList.remove('open')}
+      if(!wasOpen){item.classList.add('open')}
+    });
+  }
+})();
+</script>
+</body>
+</html>
