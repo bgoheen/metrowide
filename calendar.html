@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Schedule Your Free Consultation | Metrowide Appraisals</title>
-<meta name="description" content="Book a free consultation with Ben Goheen, Twin Cities home appraiser. Discuss your appraisal needs for divorce, estate, tax appeal, or real estate decisions.">
+<meta name="description" content="Book a free 15-minute phone consultation with Ben Goheen, Twin Cities home appraiser. Discuss your appraisal needs for divorce, estate, tax appeal, or real estate decisions.">
 <link rel="canonical" href="https://metrowide.co/calendar">
 <meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--dark:#050C1C;--dark-deep:#030912;--pink:#FF5CF0;--pink-hover:#E84AD8;--cyan:#7DF9FF;--white:#FFFFFF;--text-on-dark:#B8C4D0;--font-display:'Lora',Georgia,serif;--font-body:'DM Sans',-apple-system,sans-serif;--max-w:1080px}
+:root{--dark:#050C1C;--dark-deep:#030912;--pink:#FF5CF0;--cyan:#7DF9FF;--white:#FFFFFF;--text-on-dark:#B8C4D0;--font-body:'DM Sans',-apple-system,sans-serif;--max-w:1080px}
 html,body{height:100%}
 body{font-family:var(--font-body);background:var(--dark);color:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
@@ -39,13 +39,9 @@ button{font-family:inherit;cursor:pointer;border:none}
 .mobile-menu a:hover{color:var(--white)}
 .mobile-menu .sub-link{padding-left:1rem;font-size:.95rem;color:#8899AA}
 .mobile-menu .mobile-phone{display:inline-block;margin-top:1.5rem;color:var(--cyan);font-weight:600;font-size:1.1rem;border-bottom:none}
-.calendar-page{padding-top:calc(64px + clamp(1.5rem,3vw,2.5rem));padding-bottom:clamp(2rem,4vw,3rem);min-height:100vh;display:flex;flex-direction:column}
-.calendar-header{text-align:center;padding:0 clamp(1.25rem,4vw,2.5rem);margin-bottom:clamp(1rem,2vw,2rem)}
-.calendar-header h1{font-family:var(--font-display);font-size:clamp(1.5rem,3.5vw,2.2rem);color:var(--white);margin-bottom:.5rem}
-.calendar-header h1 em{font-style:normal;color:var(--cyan)}
-.calendar-header p{color:var(--text-on-dark);font-size:clamp(.9rem,2vw,1.05rem);max-width:500px;margin:0 auto}
-.form-container{max-width:680px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem);width:100%;flex:1}
-.footer-mini{text-align:center;padding:1.5rem clamp(1.25rem,4vw,2.5rem);font-size:.8rem;color:#667788}
+.cal-container{padding-top:64px;width:100%;min-height:calc(100vh - 64px)}
+#my-cal-inline{width:100%;height:100%;min-height:calc(100vh - 64px);overflow:auto}
+.footer-mini{text-align:center;padding:1.5rem clamp(1.25rem,4vw,2.5rem);font-size:.8rem;color:#667788;background:var(--dark)}
 .footer-mini a{color:var(--text-on-dark)}
 .footer-mini a:hover{color:var(--cyan)}
 @media(max-width:768px){
@@ -62,16 +58,9 @@ button{font-family:inherit;cursor:pointer;border:none}
 </div></nav>
 <div class="mobile-menu" id="mobileMenu"><a href="/">Home</a><a href="/tax-appeal-appraisal" class="sub-link">Tax Appeal Appraisal</a><a href="/divorce-appraisal" class="sub-link">Divorce Appraisal</a><a href="/estate-appraisal" class="sub-link">Estate Appraisal</a><a href="/pmi-removal-appraisal" class="sub-link">PMI Removal Appraisal</a><a href="/blog">Blog</a><a href="/about">About</a><a href="tel:6515054400" class="mobile-phone">651-505-4400</a></div>
 
-<main class="calendar-page">
-<div class="calendar-header">
-<h1>Schedule Your <em>Free Consultation</em></h1>
-<p>Tell us about your situation and we'll get back to you within one business day.</p>
+<div class="cal-container">
+<div id="my-cal-inline"></div>
 </div>
-<div class="form-container">
-<div data-youform-embed data-form='5wudosob' data-width='100%' data-height='675'></div>
-<script src="https://app.youform.com/embed.js"></script>
-</div>
-</main>
 
 <div class="footer-mini">
 <a href="tel:6515054400">(651) 505-4400</a> &middot; <a href="mailto:hello&#64;metrowide.co">hello&#64;metrowide.co</a><br>
@@ -91,6 +80,49 @@ button{font-family:inherit;cursor:pointer;border:none}
   var mLinks=mobileMenu.querySelectorAll('a');
   for(var i=0;i<mLinks.length;i++){mLinks[i].addEventListener('click',function(){mobileMenu.classList.remove('open')})}
 })();
+
+(function (C, A, L) {
+  var p = function (a, ar) { a.q.push(ar); };
+  var d = C.document;
+  C.Cal = C.Cal || function () {
+    var cal = C.Cal;
+    var ar = arguments;
+    if (!cal.loaded) {
+      cal.ns = {};
+      cal.q = cal.q || [];
+      d.head.appendChild(d.createElement("script")).src = A;
+      cal.loaded = true;
+    }
+    if (ar[0] === L) {
+      var api = function () { p(api, arguments); };
+      var namespace = ar[1];
+      api.q = api.q || [];
+      if (typeof namespace === "string") {
+        cal.ns[namespace] = cal.ns[namespace] || api;
+        p(cal.ns[namespace], ar);
+        p(cal, ["initNamespace", namespace]);
+      } else p(cal, ar);
+      return;
+    }
+    p(cal, ar);
+  };
+})(window, "https://app.cal.com/embed/embed.js", "init");
+
+Cal("init", {origin:"https://app.cal.com"});
+Cal("inline", {
+  elementOrSelector: "#my-cal-inline",
+  calLink: "metrowide/consultation",
+  config: {
+    layout: "month_view",
+    theme: "dark"
+  }
+});
+Cal("ui", {
+  theme: "dark",
+  styles: {
+    branding: { brandColor: "#FF5CF0" }
+  }
+});
 </script>
 </body>
 </html>
