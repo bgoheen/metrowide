@@ -9,12 +9,12 @@
 <meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--dark:#050C1C;--dark-deep:#030912;--pink:#FF5CF0;--cyan:#7DF9FF;--white:#FFFFFF;--text-on-dark:#B8C4D0;--font-body:'DM Sans',-apple-system,sans-serif;--max-w:1080px}
+:root{--dark:#050C1C;--dark-deep:#030912;--cyan:#7DF9FF;--white:#FFFFFF;--text-on-dark:#B8C4D0;--font-body:'DM Sans',-apple-system,sans-serif;--max-w:1080px}
 html,body{height:100%}
-body{font-family:var(--font-body);background:var(--dark);color:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:var(--font-body);background:var(--white);color:#222;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer;border:none}
@@ -40,10 +40,10 @@ button{font-family:inherit;cursor:pointer;border:none}
 .mobile-menu .sub-link{padding-left:1rem;font-size:.95rem;color:#8899AA}
 .mobile-menu .mobile-phone{display:inline-block;margin-top:1.5rem;color:var(--cyan);font-weight:600;font-size:1.1rem;border-bottom:none}
 .cal-container{padding-top:64px;width:100%;min-height:calc(100vh - 64px)}
-#my-cal-inline{width:100%;height:100%;min-height:calc(100vh - 64px);overflow:auto}
-.footer-mini{text-align:center;padding:1.5rem clamp(1.25rem,4vw,2.5rem);font-size:.8rem;color:#667788;background:var(--dark)}
-.footer-mini a{color:var(--text-on-dark)}
-.footer-mini a:hover{color:var(--cyan)}
+#my-cal-inline-consultation{width:100%;height:100%;min-height:calc(100vh - 64px);overflow:auto}
+.footer-mini{text-align:center;padding:1.5rem clamp(1.25rem,4vw,2.5rem);font-size:.8rem;color:#999;background:var(--white)}
+.footer-mini a{color:#666}
+.footer-mini a:hover{color:#222}
 @media(max-width:768px){
   .nav-links{display:none}.nav-phone-desktop{display:none}.hamburger{display:flex}
 }
@@ -59,7 +59,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 <div class="mobile-menu" id="mobileMenu"><a href="/">Home</a><a href="/tax-appeal-appraisal" class="sub-link">Tax Appeal Appraisal</a><a href="/divorce-appraisal" class="sub-link">Divorce Appraisal</a><a href="/estate-appraisal" class="sub-link">Estate Appraisal</a><a href="/pmi-removal-appraisal" class="sub-link">PMI Removal Appraisal</a><a href="/blog">Blog</a><a href="/about">About</a><a href="tel:6515054400" class="mobile-phone">651-505-4400</a></div>
 
 <div class="cal-container">
-<div id="my-cal-inline"></div>
+<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-consultation"></div>
 </div>
 
 <div class="footer-mini">
@@ -81,48 +81,14 @@ button{font-family:inherit;cursor:pointer;border:none}
   for(var i=0;i<mLinks.length;i++){mLinks[i].addEventListener('click',function(){mobileMenu.classList.remove('open')})}
 })();
 
-(function (C, A, L) {
-  var p = function (a, ar) { a.q.push(ar); };
-  var d = C.document;
-  C.Cal = C.Cal || function () {
-    var cal = C.Cal;
-    var ar = arguments;
-    if (!cal.loaded) {
-      cal.ns = {};
-      cal.q = cal.q || [];
-      d.head.appendChild(d.createElement("script")).src = A;
-      cal.loaded = true;
-    }
-    if (ar[0] === L) {
-      var api = function () { p(api, arguments); };
-      var namespace = ar[1];
-      api.q = api.q || [];
-      if (typeof namespace === "string") {
-        cal.ns[namespace] = cal.ns[namespace] || api;
-        p(cal.ns[namespace], ar);
-        p(cal, ["initNamespace", namespace]);
-      } else p(cal, ar);
-      return;
-    }
-    p(cal, ar);
-  };
-})(window, "https://app.cal.com/embed/embed.js", "init");
-
-Cal("init", {origin:"https://app.cal.com"});
-Cal("inline", {
-  elementOrSelector: "#my-cal-inline",
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "consultation", {origin:"https://app.cal.com"});
+Cal.ns.consultation("inline", {
+  elementOrSelector:"#my-cal-inline-consultation",
+  config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
   calLink: "metrowide/consultation",
-  config: {
-    layout: "month_view",
-    theme: "dark"
-  }
 });
-Cal("ui", {
-  theme: "dark",
-  styles: {
-    branding: { brandColor: "#FF5CF0" }
-  }
-});
+Cal.ns.consultation("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#292929"}},"hideEventTypeDetails":false,"layout":"month_view"});
 </script>
 </body>
 </html>
