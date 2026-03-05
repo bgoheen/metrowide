@@ -13,7 +13,8 @@
 <meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Lora:wght@600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--dark:#050C1C;--dark-deep:#030912;--pink:#FF5CF0;--pink-hover:#E84AD8;--cyan:#7DF9FF;--mauve-start:#E8E0F0;--mauve-end:#F0EBF5;--white:#FFFFFF;--off-white:#F8F7FA;--text:#222;--text-light:#555;--text-on-dark:#B8C4D0;--star-gold:#F4B942;--font-display:'Lora',Georgia,serif;--font-body:'DM Sans',-apple-system,sans-serif;--max-w:1080px;--section-pad:clamp(3.5rem,8vw,6rem)}
@@ -28,22 +29,22 @@ button{font-family:inherit;cursor:pointer;border:none}
 .nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem);display:flex;align-items:center;justify-content:space-between;height:64px}
 .nav-logo img{height:38px;width:auto}
 .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
-.nav-links a{color:var(--text-on-dark);font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-links a{color:var(--text-on-dark);font-size:.9rem;font-weight:400;transition:color .2s}
 .nav-links a:hover{color:var(--white)}
 .nav-links .dropdown{position:relative}
 .nav-links .dropdown-menu{position:absolute;top:calc(100% + 8px);left:-.75rem;background:var(--dark-deep);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:.5rem 0;min-width:180px;opacity:0;visibility:hidden;transform:translateY(4px);transition:all .2s;box-shadow:0 12px 32px rgba(0,0,0,.4)}
 .nav-links .dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
 .dropdown-menu a{display:block;padding:.55rem 1rem;font-size:.85rem}
-.nav-phone{color:var(--text-on-dark);font-weight:500;font-size:.9rem;white-space:nowrap;transition:color .2s}
+.nav-phone{color:var(--text-on-dark);font-weight:400;font-size:.9rem;white-space:nowrap;transition:color .2s}
 .nav-phone:hover{color:var(--white)}
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;padding:4px}
 .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
 .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--dark-deep);z-index:99;padding:2rem 1.5rem;overflow-y:auto}
 .mobile-menu.open{display:block}
-.mobile-menu a{display:block;color:var(--text-on-dark);font-size:1.05rem;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06);font-weight:500}
+.mobile-menu a{display:block;color:var(--text-on-dark);font-size:1.05rem;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06);font-weight:400}
 .mobile-menu a:hover{color:var(--white)}
 .mobile-menu .sub-link{padding-left:1rem;font-size:.95rem;color:#8899AA}
-.mobile-menu .mobile-phone{display:inline-block;margin-top:1.5rem;color:var(--cyan);font-weight:600;font-size:1.1rem;border-bottom:none}
+.mobile-menu .mobile-phone{display:inline-block;margin-top:1.5rem;color:var(--cyan);font-weight:700;font-size:1.1rem;border-bottom:none}
 .cta{display:inline-block;background:var(--pink);color:var(--white);font-weight:700;font-size:.95rem;padding:1rem 2.25rem;border-radius:8px;letter-spacing:.04em;text-transform:uppercase;transition:background .2s,transform .15s;text-align:center}
 .cta:hover{background:var(--pink-hover);transform:translateY(-1px)}
 .hero{padding-top:calc(64px + clamp(2rem,4vw,3rem));padding-bottom:var(--section-pad);background:var(--dark);position:relative;overflow:hidden}
@@ -83,7 +84,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 .review-card blockquote{color:var(--text-on-dark);font-size:.95rem;line-height:1.6;margin-bottom:1rem;font-style:italic}
 .review-footer{display:flex;align-items:center;gap:.75rem}
 .review-photo{width:44px;height:44px;border-radius:50%;object-fit:cover;flex-shrink:0}
-.review-author{font-weight:600;font-size:.85rem;color:var(--white)}
+.review-author{font-weight:700;font-size:.85rem;color:var(--white)}
 .review-location{font-size:.8rem;color:#8899AA}
 .services{padding:var(--section-pad) 0;background:var(--off-white)}
 .services-heading{text-align:center;font-family:var(--font-display);font-size:clamp(1.5rem,3.5vw,2.2rem);color:var(--text);margin-bottom:.75rem}
@@ -94,7 +95,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 a.check-item{text-decoration:none;color:inherit}
 .check-icon{flex-shrink:0;width:28px;height:28px;background:rgba(255,92,240,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .check-icon svg{width:14px;height:14px}
-.check-item h4{font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:.2rem}
+.check-item h4{font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:.2rem}
 .check-item p{font-size:.82rem;color:var(--text-light);line-height:1.5}
 .process{padding:var(--section-pad) 0;background:var(--white)}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:3rem}
@@ -105,7 +106,7 @@ a.check-item{text-decoration:none;color:inherit}
 .faq{padding:var(--section-pad) 0;background:var(--off-white)}
 .faq-list{max-width:700px;margin:0 auto}
 .faq-item{border-bottom:1px solid rgba(0,0,0,.08)}
-.faq-q{width:100%;background:none;text-align:left;padding:1.25rem 0;font-size:1rem;font-weight:600;color:var(--text);display:flex;justify-content:space-between;align-items:center;gap:1rem;line-height:1.4}
+.faq-q{width:100%;background:none;text-align:left;padding:1.25rem 0;font-size:1rem;font-weight:700;color:var(--text);display:flex;justify-content:space-between;align-items:center;gap:1rem;line-height:1.4}
 .faq-q::after{content:'+';font-size:1.4rem;font-weight:400;color:var(--pink);flex-shrink:0}
 .faq-item.open .faq-q::after{content:'\2212'}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
