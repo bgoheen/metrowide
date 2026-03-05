@@ -8,6 +8,7 @@
 <link rel="canonical" href="https://metrowide.co/calendar">
 <meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Lora:wght@600;700&display=swap">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -23,22 +24,22 @@ button{font-family:inherit;cursor:pointer;border:none}
 .nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem);display:flex;align-items:center;justify-content:space-between;height:64px}
 .nav-logo img{height:38px;width:auto}
 .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
-.nav-links a{color:var(--text-on-dark);font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-links a{color:var(--text-on-dark);font-size:.9rem;font-weight:400;transition:color .2s}
 .nav-links a:hover{color:var(--white)}
 .nav-links .dropdown{position:relative}
 .nav-links .dropdown-menu{position:absolute;top:calc(100% + 8px);left:-.75rem;background:var(--dark-deep);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:.5rem 0;min-width:180px;opacity:0;visibility:hidden;transform:translateY(4px);transition:all .2s;box-shadow:0 12px 32px rgba(0,0,0,.4)}
 .nav-links .dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
 .dropdown-menu a{display:block;padding:.55rem 1rem;font-size:.85rem}
-.nav-phone{color:var(--text-on-dark);font-weight:500;font-size:.9rem;white-space:nowrap;transition:color .2s}
+.nav-phone{color:var(--text-on-dark);font-weight:400;font-size:.9rem;white-space:nowrap;transition:color .2s}
 .nav-phone:hover{color:var(--white)}
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;padding:4px}
 .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
 .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--dark-deep);z-index:99;padding:2rem 1.5rem;overflow-y:auto}
 .mobile-menu.open{display:block}
-.mobile-menu a{display:block;color:var(--text-on-dark);font-size:1.05rem;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06);font-weight:500}
+.mobile-menu a{display:block;color:var(--text-on-dark);font-size:1.05rem;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06);font-weight:400}
 .mobile-menu a:hover{color:var(--white)}
 .mobile-menu .sub-link{padding-left:1rem;font-size:.95rem;color:#8899AA}
-.mobile-menu .mobile-phone{display:inline-block;margin-top:1.5rem;color:var(--cyan);font-weight:600;font-size:1.1rem;border-bottom:none}
+.mobile-menu .mobile-phone{display:inline-block;margin-top:1.5rem;color:var(--cyan);font-weight:700;font-size:1.1rem;border-bottom:none}
 .cal-container{padding-top:64px;width:100%;min-height:calc(100vh - 64px)}
 #my-cal-inline-consultation{width:100%;height:100%;min-height:calc(100vh - 64px);overflow:auto}
 .footer-mini{text-align:center;padding:1.5rem clamp(1.25rem,4vw,2.5rem);font-size:.8rem;color:#999;background:#F8F7FA}
@@ -52,11 +53,11 @@ button{font-family:inherit;cursor:pointer;border:none}
 <body>
 <nav class="nav" id="nav"><div class="nav-inner">
 <a href="/" class="nav-logo"><img src="images/Minnesota-home-appraisal.webp" alt="Metrowide Appraisals" width="38" height="38"></a>
-<ul class="nav-links"><li><a href="/">Home</a></li><li class="dropdown"><a href="#">Appraisal Types &#9662;</a><div class="dropdown-menu"><a href="/divorce-appraisal">Divorce</a><a href="/estate-appraisal">Estate</a><a href="/selling-your-home">Selling Your Home</a><a href="/pmi-removal-appraisal">PMI Removal</a><a href="/tax-appeal-appraisal">Tax Appeal</a></div></li><li><a href="/blog">Blog</a></li><li><a href="/about">About</a></li></ul>
+<ul class="nav-links"><li><a href="/">Home</a></li><li class="dropdown"><a href="#">Appraisal Types &#9662;</a><div class="dropdown-menu"><a href="/divorce-appraisal">Divorce</a><a href="/estate-appraisal">Estate</a><a href="/selling-your-home">Selling Your Home</a><a href="/pmi-removal-appraisal">PMI Removal</a><a href="/tax-appeal-appraisal">Tax Appeal</a><a href="/service-area">Service Area</a></div></li><li><a href="/blog">Blog</a></li><li><a href="/about">About</a></li></ul>
 <a href="tel:6515054400" class="nav-phone nav-phone-desktop">651-505-4400</a>
 <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
 </div></nav>
-<div class="mobile-menu" id="mobileMenu"><a href="/">Home</a><a href="/divorce-appraisal" class="sub-link">Divorce Appraisal</a><a href="/estate-appraisal" class="sub-link">Estate Appraisal</a><a href="/selling-your-home" class="sub-link">Selling Your Home</a><a href="/pmi-removal-appraisal" class="sub-link">PMI Removal Appraisal</a><a href="/tax-appeal-appraisal" class="sub-link">Tax Appeal Appraisal</a><a href="/blog">Blog</a><a href="/about">About</a><a href="tel:6515054400" class="mobile-phone">651-505-4400</a></div>
+<div class="mobile-menu" id="mobileMenu"><a href="/">Home</a><a href="/divorce-appraisal" class="sub-link">Divorce Appraisal</a><a href="/estate-appraisal" class="sub-link">Estate Appraisal</a><a href="/selling-your-home" class="sub-link">Selling Your Home</a><a href="/pmi-removal-appraisal" class="sub-link">PMI Removal Appraisal</a><a href="/tax-appeal-appraisal" class="sub-link">Tax Appeal Appraisal</a><a href="/service-area" class="sub-link">Service Area</a><a href="/blog">Blog</a><a href="/about">About</a><a href="tel:6515054400" class="mobile-phone">651-505-4400</a></div>
 
 <div class="cal-container">
 <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-consultation"></div>
