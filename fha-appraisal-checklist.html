@@ -75,7 +75,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 .toc-sidebar a.active{color:var(--pink);border-left-color:var(--pink);font-weight:700}
 .article-body h2{font-family:var(--font-display);font-size:clamp(1.2rem,2.5vw,1.6rem);color:var(--text);margin:2.5rem 0 1rem;line-height:1.3;scroll-margin-top:80px}
 .article-body h3{font-size:1.05rem;font-weight:700;color:var(--text);margin:2rem 0 .75rem}
-.article-body p{margin-bottom:1.25rem;font-size:1rem}
+.article-body p{margin-bottom:1.25rem;font-size:1.05rem}
 .article-body strong{color:var(--dark)}
 .article-body .callout{background:var(--white);border-radius:10px;padding:1.5rem 1.75rem;margin:1.75rem 0;border-left:4px solid var(--pink);box-shadow:0 2px 8px rgba(0,0,0,.04)}
 .article-body .callout p{margin-bottom:.5rem}
@@ -85,11 +85,11 @@ button{font-family:inherit;cursor:pointer;border:none}
 .article-body .example p:last-child{margin-bottom:0}
 .checklist-box{background:var(--white);border-radius:10px;padding:1.75rem 2rem;margin:1.75rem 0;border:2px solid var(--pink);box-shadow:0 2px 12px rgba(0,0,0,.05)}
 .checklist-box h3{margin-top:0;font-size:1rem;color:var(--pink)}
-.checklist-box p{margin-bottom:.4rem;padding-left:1.5rem;position:relative;font-size:.95rem}
+.checklist-box p{margin-bottom:.4rem;padding-left:1.5rem;position:relative;font-size:1.05rem}
 .checklist-box p::before{content:'\2713';position:absolute;left:0;color:var(--pink);font-weight:700}
 .article-cta{background:var(--dark);border-radius:12px;padding:2.5rem;text-align:center;margin:3rem 0 1rem}
 .article-cta h2{font-family:var(--font-display);color:var(--white);font-size:clamp(1.2rem,3vw,1.6rem);margin:0 0 .5rem;scroll-margin-top:80px}
-.article-cta p{color:var(--text-on-dark);margin-bottom:1.5rem;font-size:1rem}
+.article-cta p{color:var(--text-on-dark);margin-bottom:1.5rem;font-size:1.05rem}
 .article-cta .cta{text-decoration:none}
 .footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding:2.5rem 0}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
@@ -252,7 +252,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 </div>
 
 <footer class="footer"><div class="wrap"><div class="footer-inner">
-<div class="footer-left">&copy; 2026 Metrowide Appraisals. All rights reserved.<br><a href="tel:6515054400">(651) 505-4400</a> &middot; <a href="mailto:hello&#64;metrowide.co">hello&#64;metrowide.co</a></div>
+<div class="footer-left">&copy; 2026 Metrowide Appraisals. All rights reserved.<br><a href="tel:6515054400">(651) 505-4400</a> &middot; <a href="/cdn-cgi/l/email-protection#7c14191010135a5f4a48471119080e130b151819521f13">hello&#64;metrowide.co</a></div>
 <div class="footer-right"><a href="/about">About</a><a href="/blog">Blog</a><a href="/privacy">Privacy Policy</a></div>
 </div></div></footer>
 
@@ -283,12 +283,4 @@ button{font-family:inherit;cursor:pointer;border:none}
         if(sections[k].el.offsetTop<=scrollPos) active=sections[k].link;
       }
       for(var m=0;m<tocLinks.length;m++) tocLinks[m].classList.remove('active');
-      active.classList.add('active');
-    };
-    window.addEventListener('scroll',onScroll,{passive:true});
-    onScroll();
-  }
-})();
-</script>
-</body>
-</html>
+      a

@@ -60,18 +60,18 @@ button{font-family:inherit;cursor:pointer;border:none}
 .value-card{background:var(--white);border-radius:12px;padding:1.75rem;border:1px solid rgba(0,0,0,.05);box-shadow:0 2px 8px rgba(0,0,0,.04)}
 .value-card h3{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:.4rem;display:flex;align-items:center;gap:.5rem}
 .value-card h3 .v-icon{color:var(--pink);font-size:1.2rem}
-.value-card p{font-size:.9rem;color:var(--text-light);line-height:1.6}
+.value-card p{font-size:1.05rem;color:var(--text-light);line-height:1.6}
 .bio{padding:var(--section-pad) 0;background:var(--white)}
 .bio .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
 .bio-photo img{width:100%;display:block}
 .bio-text h2{font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2rem);color:var(--text);margin-bottom:1.25rem;line-height:1.25}
-.bio-text p{font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:1rem}
+.bio-text p{font-size:1.05rem;color:var(--text);line-height:1.7;margin-bottom:1rem}
 .bio-text p:last-child{margin-bottom:0}
 .giving{padding:var(--section-pad) 0;background:var(--off-white)}
 .giving-header{text-align:center;max-width:680px;margin:0 auto 3rem}
 .section-label{text-transform:uppercase;font-size:.78rem;font-weight:700;letter-spacing:.12em;color:var(--pink);margin-bottom:.75rem}
 .section-heading{font-family:var(--font-display);font-size:clamp(1.5rem,3.5vw,2.2rem);color:var(--text);margin-bottom:1rem;line-height:1.25}
-.giving-header p{font-size:1rem;color:var(--text-light);line-height:1.65}
+.giving-header p{font-size:1.05rem;color:var(--text-light);line-height:1.65}
 .orgs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .org-card{background:var(--white);border-radius:12px;overflow:hidden;border:1px solid rgba(0,0,0,.05);box-shadow:0 2px 8px rgba(0,0,0,.04);transition:border-color .2s,transform .2s;display:flex;flex-direction:column}
 .org-card:hover{border-color:var(--pink);transform:translateY(-2px)}
@@ -79,7 +79,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 .org-img img{width:100%;height:100%;object-fit:cover}
 .org-body{padding:1.25rem 1.5rem;flex:1;display:flex;flex-direction:column}
 .org-body h3{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:.4rem}
-.org-body p{font-size:.85rem;color:var(--text-light);line-height:1.55;flex:1}
+.org-body p{font-size:1.05rem;color:var(--text-light);line-height:1.55;flex:1}
 .org-link{display:inline-block;margin-top:.75rem;font-size:.82rem;font-weight:700;color:var(--pink);transition:color .2s}
 .org-link:hover{color:var(--pink-hover)}
 .final-cta{padding:var(--section-pad) 0;background:var(--dark);text-align:center}
@@ -161,7 +161,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 </div></section>
 
 <footer class="footer"><div class="wrap"><div class="footer-inner">
-<div class="footer-left">&copy; 2026 Metrowide Appraisals. All rights reserved.<br><a href="tel:6515054400">(651) 505-4400</a> &middot; <a href="mailto:hello&#64;metrowide.co">hello&#64;metrowide.co</a></div>
+<div class="footer-left">&copy; 2026 Metrowide Appraisals. All rights reserved.<br><a href="tel:6515054400">(651) 505-4400</a> &middot; <a href="/cdn-cgi/l/email-protection#a9c1ccc5c5c68f8a9f9d92c4ccdddbc6dec0cdcc87cac6">hello&#64;metrowide.co</a></div>
 <div class="footer-right"><a href="/about">About</a><a href="/blog">Blog</a><a href="/privacy">Privacy Policy</a></div>
 </div></div></footer>
 
@@ -176,8 +176,3 @@ button{font-family:inherit;cursor:pointer;border:none}
     hamburger.setAttribute('aria-expanded',mobileMenu.classList.contains('open'));
   });
   var mLinks=mobileMenu.querySelectorAll('a');
-  for(var i=0;i<mLinks.length;i++){mLinks[i].addEventListener('click',function(){mobileMenu.classList.remove('open')})}
-})();
-</script>
-</body>
-</html>
