@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Exclude utility pages
+Disallow: /pay
+Disallow: /privacy
+
+Sitemap: https://metrowide.co/sitemap.xml
