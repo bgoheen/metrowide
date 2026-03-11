@@ -60,7 +60,19 @@ button{font-family:inherit;cursor:pointer;border:none}
 <div class="mobile-menu" id="mobileMenu"><a href="/">Home</a><a href="/divorce-appraisal" class="sub-link">Divorce Appraisal</a><a href="/estate-appraisal" class="sub-link">Estate Appraisal</a><a href="/selling-your-home" class="sub-link">Selling Your Home</a><a href="/pmi-removal-appraisal" class="sub-link">PMI Removal Appraisal</a><a href="/tax-appeal-appraisal" class="sub-link">Tax Appeal Appraisal</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/service-area">Service Area</a><a href="tel:6515054400" class="mobile-phone">651-505-4400</a></div>
 
 <div class="cal-container">
+<!-- Cal inline embed code begins -->
 <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-consultation"></div>
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "consultation", {origin:"https://app.cal.com"});
+  Cal.ns.consultation("inline", {
+    elementOrSelector:"#my-cal-inline-consultation",
+    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+    calLink: "metrowide/consultation",
+  });
+  Cal.ns.consultation("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#292929"},"dark":{"cal-brand":"#fafafa"}},"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
+<!-- Cal inline embed code ends -->
 </div>
 
 <div class="footer-mini">
@@ -81,12 +93,6 @@ button{font-family:inherit;cursor:pointer;border:none}
   var mLinks=mobileMenu.querySelectorAll('a');
   for(var i=0;i<mLinks.length;i++){mLinks[i].addEventListener('click',function(){mobileMenu.classList.remove('open')})}
 })();
-
-(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", "consultation", {origin:"https://app.cal.com"});
-Cal.ns.consultation("inline", {
-  elementOrSelector:"#my-cal-inline-consultation",
-  config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-  calLink: "metrowide/consultation",
-});
-Cal.ns
+</script>
+</body>
+</html>
