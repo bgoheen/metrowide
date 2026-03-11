@@ -124,6 +124,13 @@ Metrowide Appraisals<br>
   window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>20)},{passive:true});
   var hamburger=document.getElementById('hamburger');
   var mobileMenu=document.getElementById('mobileMenu');
-  hamburger.addEventListener('click',function(){
+    hamburger.addEventListener('click',function(){
     mobileMenu.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded',mo
+    hamburger.setAttribute('aria-expanded',mobileMenu.classList.contains('open'));
+  });
+  var mLinks=mobileMenu.querySelectorAll('a');
+  for(var i=0;i<mLinks.length;i++){mLinks[i].addEventListener('click',function(){mobileMenu.classList.remove('open')})}
+})();
+</script>
+</body>
+</html>

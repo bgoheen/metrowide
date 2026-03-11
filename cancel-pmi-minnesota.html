@@ -333,21 +333,7 @@ button{font-family:inherit;cursor:pointer;border:none}
   });
   var mLinks=mobileMenu.querySelectorAll('a');
   for(var i=0;i<mLinks.length;i++){mLinks[i].addEventListener('click',function(){mobileMenu.classList.remove('open')})}
-
-  /* TOC scroll spy */
-  var tocLinks=document.querySelectorAll('.toc-sidebar a');
-  var sections=[];
-  for(var j=0;j<tocLinks.length;j++){
-    var id=tocLinks[j].getAttribute('href').slice(1);
-    var el=document.getElementById(id);
-    if(el) sections.push({el:el,link:tocLinks[j]});
-  }
-  if(sections.length){
-    var onScroll=function(){
-      var scrollPos=window.scrollY+120;
-      var active=sections[0].link;
-      for(var k=0;k<sections.length;k++){
-        if(sections[k].el.offsetTop<=scrollPos) active=sections[k].link;
-      }
-      for(var m=0;m<tocLinks.length;m++) tocLinks[m].classList.remove('active');
-      a
+})();
+</script>
+</body>
+</html>

@@ -176,3 +176,8 @@ button{font-family:inherit;cursor:pointer;border:none}
     hamburger.setAttribute('aria-expanded',mobileMenu.classList.contains('open'));
   });
   var mLinks=mobileMenu.querySelectorAll('a');
+  for(var i=0;i<mLinks.length;i++){mLinks[i].addEventListener('click',function(){mobileMenu.classList.remove('open')})}
+})();
+</script>
+</body>
+</html>
