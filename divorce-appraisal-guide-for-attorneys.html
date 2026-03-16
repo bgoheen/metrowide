@@ -12,24 +12,26 @@
 <meta property="og:url" content="https://metrowide.co/divorce-appraisal-guide-for-attorneys">
 <meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Lora:wght@600;700&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--dark:#050C1C;--dark-deep:#030912;--pink:#FF5CF0;--pink-hover:#E84AD8;--cyan:#7DF9FF;--mauve-start:#E8E0F0;--mauve-end:#F0EBF5;--white:#FFFFFF;--off-white:#F8F7FA;--text:#222;--text-light:#555;--text-on-dark:#B8C4D0;--star-gold:#F4B942;--font-display:'Lora',Georgia,serif;--font-body:'DM Sans',-apple-system,sans-serif;--max-w:1080px;--section-pad:clamp(3.5rem,8vw,6rem)}
+:root{--dark:#050C1C;--dark-deep:#030912;--pink:#FF5CF0;--pink-hover:#E84AD8;--cyan:#7DF9FF;--mauve-start:#E8E0F0;--mauve-end:#F0EBF5;--white:#FFFFFF;--off-white:#F8F7FA;--text:#222;--text-light:#555;--text-on-dark:#B8C4D0;--font-display:'Lora',Georgia,serif;--font-body:'DM Sans',-apple-system,sans-serif;--max-w:1080px}
 html{scroll-behavior:smooth}
-body{font-family:var(--font-body);color:var(--text);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:var(--font-body);color:var(--text);background:var(--off-white);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
-a{color:inherit;text-decoration:none}
+a{color:var(--pink);text-decoration:underline;text-decoration-color:rgba(255,92,240,.3);text-underline-offset:2px}
+a:hover{text-decoration-color:var(--pink)}
 button{font-family:inherit;cursor:pointer;border:none}
 .wrap{max-width:var(--max-w);margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--dark);border-bottom:1px solid rgba(255,255,255,.05);transition:box-shadow .3s}
 .nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.4)}
 .nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem);display:flex;align-items:center;justify-content:space-between;height:64px}
 .nav-logo img{height:38px;width:auto}
+.nav-logo,.nav-links a,.nav-phone,.hamburger{text-decoration:none}
 .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
-.nav-links a{color:var(--text-on-dark);font-size:.9rem;font-weight:400;transition:color .2s}
+.nav-links a{color:var(--text-on-dark);font-size:.9rem;font-weight:400;transition:color .2s;text-decoration:none}
 .nav-links a:hover{color:var(--white)}
 .nav-links .dropdown{position:relative}
 .nav-links .dropdown-menu{position:absolute;top:calc(100% + 8px);left:-.75rem;background:var(--dark-deep);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:.5rem 0;min-width:180px;opacity:0;visibility:hidden;transform:translateY(4px);transition:all .2s;box-shadow:0 12px 32px rgba(0,0,0,.4)}
@@ -41,83 +43,66 @@ button{font-family:inherit;cursor:pointer;border:none}
 .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
 .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--dark-deep);z-index:99;padding:2rem 1.5rem;overflow-y:auto}
 .mobile-menu.open{display:block}
-.mobile-menu a{display:block;color:var(--text-on-dark);font-size:1.05rem;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06);font-weight:400}
+.mobile-menu a{display:block;color:var(--text-on-dark);font-size:1.05rem;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06);font-weight:400;text-decoration:none}
 .mobile-menu a:hover{color:var(--white)}
 .mobile-menu .sub-link{padding-left:1rem;font-size:.95rem;color:#8899AA}
 .mobile-menu .mobile-phone{display:inline-block;margin-top:1.5rem;color:var(--cyan);font-weight:700;font-size:1.1rem;border-bottom:none}
-.cta{display:inline-block;background:var(--pink);color:var(--white);font-weight:700;font-size:.95rem;padding:1rem 2.25rem;border-radius:8px;letter-spacing:.04em;text-transform:uppercase;transition:background .2s,transform .15s;text-align:center}
+.cta{display:inline-block;background:var(--pink);color:var(--white);font-weight:700;font-size:.95rem;padding:1rem 2.25rem;border-radius:8px;letter-spacing:.04em;text-transform:uppercase;transition:background .2s,transform .15s;text-align:center;text-decoration:none}
 .cta:hover{background:var(--pink-hover);transform:translateY(-1px)}
-.blog-hero{padding-top:calc(64px + clamp(2rem,4vw,3rem));padding-bottom:clamp(2.5rem,5vw,4rem);background:var(--dark);text-align:center}
-.blog-hero h1{font-family:var(--font-display);color:var(--white);font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.2;font-weight:700;max-width:800px;margin:0 auto 1rem}
-.blog-hero .byline{color:var(--text-on-dark);font-size:.95rem;margin-bottom:0}
-.blog-layout{display:grid;grid-template-columns:1fr 280px;gap:4rem;align-items:start;padding:var(--section-pad) 0;background:linear-gradient(180deg,var(--mauve-start) 0%,var(--mauve-end) 30%,var(--off-white) 100%)}
-.blog-content h2{font-family:var(--font-display);font-size:clamp(1.3rem,3vw,1.7rem);color:var(--text);margin:2.5rem 0 1rem;line-height:1.3}
-.blog-content h2:first-child{margin-top:0}
-.blog-content h3{font-size:1.1rem;font-weight:700;color:var(--text);margin:1.5rem 0 .6rem}
-.blog-content p{font-size:1.05rem;color:var(--text);line-height:1.75;margin-bottom:1.25rem}
-.blog-content p:last-child{margin-bottom:0}
-.blog-content strong{color:var(--dark)}
-.blog-content a{color:var(--pink);text-decoration:underline;text-decoration-color:rgba(255,92,240,.3);text-underline-offset:2px}
-.blog-content a:hover{text-decoration-color:var(--pink)}
-.highlight-box{background:var(--white);border-radius:12px;padding:1.75rem 2rem;margin:2rem 0;border-left:4px solid var(--pink);box-shadow:0 2px 12px rgba(0,0,0,.05)}
-.highlight-box p{font-size:1.05rem;margin-bottom:.75rem}
-.highlight-box p:last-child{margin-bottom:0}
-.toc{background:var(--white);border-radius:12px;padding:1.5rem;border:1px solid rgba(0,0,0,.07);position:sticky;top:84px}
-.toc h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:1rem}
-.toc ol{list-style:none;counter-reset:toc-counter}
-.toc li{counter-increment:toc-counter;margin-bottom:.6rem}
-.toc li a{font-size:.9rem;color:var(--text-light);display:flex;gap:.5rem;align-items:baseline;transition:color .2s}
-.toc li a::before{content:counter(toc-counter);font-size:.75rem;color:var(--pink);font-weight:700;flex-shrink:0;min-width:14px}
-.toc li a:hover{color:var(--text)}
-.blog-cta{background:var(--dark);border-radius:12px;padding:2rem;margin-top:2rem;text-align:center}
-.blog-cta p{color:var(--text-on-dark);font-size:.95rem;margin-bottom:1.25rem;line-height:1.6}
-.blog-cta .cta{font-size:.85rem;padding:.75rem 1.5rem}
-.final-cta{padding:var(--section-pad) 0;background:var(--dark);text-align:center}
-.final-cta h2{font-family:var(--font-display);font-size:clamp(1.5rem,4vw,2.4rem);color:var(--white);margin-bottom:.75rem}
-.final-cta p{color:var(--text-on-dark);font-size:1.05rem;margin-bottom:2rem;max-width:520px;margin-left:auto;margin-right:auto}
+.article-hero{padding-top:calc(64px + clamp(2rem,4vw,3rem));padding-bottom:clamp(2rem,4vw,3rem);background:var(--dark)}
+.article-hero .wrap{max-width:760px}
+.article-hero .breadcrumb{font-size:.82rem;color:#8899AA;margin-bottom:1rem}
+.article-hero .breadcrumb a{color:var(--text-on-dark);text-decoration:none}
+.article-hero .breadcrumb a:hover{color:var(--cyan)}
+.article-hero h1{font-family:var(--font-display);color:var(--white);font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.2;font-weight:700;margin-bottom:.75rem}
+.article-hero .article-meta{color:#8899AA;font-size:.85rem}
+.article-layout{display:grid;grid-template-columns:1fr 240px;gap:3rem;max-width:var(--max-w);margin:0 auto;padding:clamp(2rem,4vw,3rem) clamp(1.25rem,4vw,2.5rem)}
+.article-body{max-width:760px}
+.toc-mobile{display:none;background:var(--white);border:1px solid rgba(0,0,0,.06);border-radius:10px;padding:1rem 1.25rem;margin-bottom:2rem}
+.toc-mobile summary{font-weight:700;font-size:.9rem;color:var(--text);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.toc-mobile summary::after{content:'+';font-size:1.1rem;color:var(--pink)}
+.toc-mobile[open] summary::after{content:'\2212'}
+.toc-mobile ol{margin-top:.75rem;padding-left:1.25rem}
+.toc-mobile li{margin-bottom:.4rem}
+.toc-mobile a{font-size:.85rem;color:var(--text-light);text-decoration:none}
+.toc-mobile a:hover{color:var(--pink)}
+.toc-sidebar{position:sticky;top:84px;align-self:start}
+.toc-sidebar .toc-title{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--pink);margin-bottom:.75rem}
+.toc-sidebar ol{list-style:none;padding:0;border-left:2px solid rgba(0,0,0,.06)}
+.toc-sidebar li{margin-bottom:0}
+.toc-sidebar a{display:block;padding:.45rem 0 .45rem 1rem;font-size:.82rem;color:var(--text-light);text-decoration:none;border-left:2px solid transparent;margin-left:-2px;transition:color .2s,border-color .2s;line-height:1.35}
+.toc-sidebar a:hover{color:var(--text)}
+.toc-sidebar a.active{color:var(--pink);border-left-color:var(--pink);font-weight:700}
+.article-body h2{font-family:var(--font-display);font-size:clamp(1.2rem,2.5vw,1.6rem);color:var(--text);margin:2.5rem 0 1rem;line-height:1.3;scroll-margin-top:80px}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--text);margin:2rem 0 .75rem}
+.article-body p{margin-bottom:1.25rem;font-size:1.05rem}
+.article-body strong{color:var(--dark)}
+.article-body .callout{background:var(--white);border-radius:10px;padding:1.5rem 1.75rem;margin:1.75rem 0;border-left:4px solid var(--pink);box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.article-body .callout p{margin-bottom:.5rem}
+.article-body .callout p:last-child{margin-bottom:0}
+.article-cta{background:var(--dark);border-radius:12px;padding:2.5rem;text-align:center;margin:3rem 0 1rem}
+.article-cta h2{font-family:var(--font-display);color:var(--white);font-size:clamp(1.2rem,3vw,1.6rem);margin:0 0 .5rem;scroll-margin-top:80px}
+.article-cta p{color:var(--text-on-dark);margin-bottom:1.5rem;font-size:1.05rem}
+.article-cta .cta{text-decoration:none}
 .footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding:2.5rem 0}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-left{font-size:.85rem;color:#8899AA}
-.footer-left a{color:var(--text-on-dark)}
+.footer-left a{color:var(--text-on-dark);text-decoration:none}
 .footer-left a:hover{color:var(--cyan)}
 .footer-right{display:flex;gap:2rem;font-size:.85rem}
-.footer-right a{color:var(--text-on-dark)}
+.footer-right a{color:var(--text-on-dark);text-decoration:none}
 .footer-right a:hover{color:var(--cyan)}
-.breadcrumb{font-size:.85rem;color:var(--text-on-dark);padding:1rem 0 0;text-align:center}
-.breadcrumb a{color:var(--text-on-dark);text-decoration:underline;text-decoration-color:rgba(255,255,255,.2)}
-.breadcrumb span{margin:0 .4rem;opacity:.4}
-@media(max-width:900px){
-  .blog-layout{grid-template-columns:1fr}
-  .toc{position:static;margin-bottom:2rem}
-}
 @media(max-width:768px){
   .nav-links{display:none}.nav-phone-desktop{display:none}.hamburger{display:flex}
+  .article-layout{grid-template-columns:1fr;gap:0}
+  .toc-sidebar{display:none}
+  .toc-mobile{display:block}
   .footer-inner{flex-direction:column;text-align:center}
 }
+@media(min-width:769px){.toc-mobile{display:none}}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "What Minnesota Divorce Attorneys Should Know About Home Appraisals",
-  "author": {
-    "@type": "Person",
-    "name": "Ben Goheen",
-    "jobTitle": "Certified Residential Appraiser",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Metrowide Appraisals"
-    }
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Metrowide Appraisals",
-    "url": "https://metrowide.co"
-  },
-  "datePublished": "2026-03-16",
-  "dateModified": "2026-03-16",
-  "description": "A Twin Cities appraiser's practical guide for Minnesota family law attorneys on divorce home appraisals: timing, valuation dates, joint vs. separate appraisals, and how to avoid delays."
-}
+{"@context":"https://schema.org","@type":"Article","headline":"What Minnesota Divorce Attorneys Should Know About Home Appraisals","author":{"@type":"Person","name":"Ben Goheen","jobTitle":"Certified Residential Appraiser"},"publisher":{"@type":"Organization","name":"Metrowide Appraisals","url":"https://metrowide.co"},"datePublished":"2026-03-16","dateModified":"2026-03-16","description":"A Twin Cities appraiser's practical guide for Minnesota family law attorneys on divorce home appraisals: timing, valuation dates, joint vs. separate appraisals, and how to avoid delays.","mainEntityOfPage":"https://metrowide.co/divorce-appraisal-guide-for-attorneys"}
 </script>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCR29YPPN9"></script>
@@ -137,17 +122,28 @@ gtag("config","G-SCR29YPPN9");
 </div></nav>
 <div class="mobile-menu" id="mobileMenu"><a href="/">Home</a><a href="/divorce-appraisal" class="sub-link">Divorce Appraisal</a><a href="/estate-appraisal" class="sub-link">Estate Appraisal</a><a href="/selling-your-home" class="sub-link">Selling Your Home</a><a href="/pmi-removal-appraisal" class="sub-link">PMI Removal Appraisal</a><a href="/tax-appeal-appraisal" class="sub-link">Tax Appeal Appraisal</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/service-area">Service Area</a><a href="tel:6515054400" class="mobile-phone">651-505-4400</a></div>
 
-<header class="blog-hero"><div class="wrap">
-<p class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/blog">Blog</a><span>›</span>Divorce Appraisals: A Guide for Attorneys</p>
+<header class="article-hero"><div class="wrap">
+<div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog">Blog</a> &rsaquo; Divorce Appraisals: A Guide for Attorneys</div>
 <h1>What Minnesota Divorce Attorneys Should Know About Home Appraisals</h1>
-<p class="byline">By Ben Goheen, Minnesota Certified Residential Appraiser (License #20303548) &middot; March 2026</p>
+<div class="article-meta">By Ben Goheen, Minnesota Certified Residential Appraiser (License #20303548) &middot; March 2026</div>
 </div></header>
 
-<section style="background:linear-gradient(180deg,var(--mauve-start) 0%,var(--mauve-end) 30%,var(--off-white) 100%);padding:var(--section-pad) 0">
-<div class="wrap">
-<div class="blog-layout" style="padding:0;background:none">
+<div class="article-layout">
 
-<article class="blog-content">
+<article class="article-body">
+
+<details class="toc-mobile">
+<summary>Table of Contents</summary>
+<ol>
+<li><a href="#timing">Order Early</a></li>
+<li><a href="#valuation-date">The Valuation Date</a></li>
+<li><a href="#joint-vs-separate">Joint vs. Separate</a></li>
+<li><a href="#access">Property Access</a></li>
+<li><a href="#report-quality">Court-Ready Reports</a></li>
+<li><a href="#challenging">Challenging a Value</a></li>
+<li><a href="#working-together">Working With Me</a></li>
+</ol>
+</details>
 
 <p>Most family law attorneys handle property division regularly, but the home appraisal itself — how it works, what drives the number, what can go wrong — often sits outside an attorney's direct experience. The appraiser handles it; the attorney gets the report.</p>
 
@@ -216,26 +212,26 @@ gtag("config","G-SCR29YPPN9");
 <p>Phone: <a href="tel:6515054400">651-505-4400</a><br>
 Schedule online: <a href="/calendar">metrowide.co/calendar</a></p>
 
-<div class="highlight-box">
+<div class="callout">
 <p><strong>Quick reference for attorneys</strong></p>
 <p><strong>Timeline:</strong> Budget 5 to 7 business days from first contact to final report for most Twin Cities properties.</p>
 <p><strong>Valuation date:</strong> Determine this before ordering — current value or retrospective as of a specific date. Changing it after the report is complete requires a new report.</p>
 <p><strong>Joint vs. separate:</strong> One shared appraisal is almost always more efficient. Two separate appraisals often produce two different numbers that then require resolution.</p>
 <p><strong>Access:</strong> Coordinate interior access before ordering, especially if the occupying spouse is uncooperative.</p>
 <p><strong>Challenging a value:</strong> Provide specific comparable sales — not general objections — to trigger a formal review.</p>
-<p><strong>Contact:</strong> 651-505-4400 or <a href="/calendar">schedule online</a>. Attorney inquiries welcome.</p>
+<p><strong>Contact:</strong> <a href="tel:6515054400">651-505-4400</a> or <a href="/calendar">schedule online</a>. Attorney inquiries welcome.</p>
 </div>
 
-<div class="blog-cta">
-<p>Attorney inquiries welcome. I'm happy to discuss a case before any commitment is made.</p>
+<div class="article-cta">
+<h2>Questions About a Specific Case?</h2>
+<p>Attorney inquiries are welcome at no charge and no obligation.</p>
 <a href="/calendar" class="cta">Schedule a Call</a>
 </div>
 
 </article>
 
-<aside>
-<nav class="toc">
-<h4>On This Page</h4>
+<aside class="toc-sidebar">
+<div class="toc-title">On This Page</div>
 <ol>
 <li><a href="#timing">Order Early</a></li>
 <li><a href="#valuation-date">The Valuation Date</a></li>
@@ -245,18 +241,9 @@ Schedule online: <a href="/calendar">metrowide.co/calendar</a></p>
 <li><a href="#challenging">Challenging a Value</a></li>
 <li><a href="#working-together">Working With Me</a></li>
 </ol>
-</nav>
 </aside>
 
 </div>
-</div>
-</section>
-
-<section class="final-cta"><div class="wrap">
-<h2>Questions About a Specific Case?</h2>
-<p>Call or schedule online. Attorney inquiries are welcome at no charge and no obligation.</p>
-<a href="/calendar" class="cta">Schedule My Free Consultation</a>
-</div></section>
 
 <footer class="footer"><div class="wrap"><div class="footer-inner">
 <div class="footer-left">&copy; 2026 Metrowide Appraisals. All rights reserved.<br><a href="tel:6515054400">(651) 505-4400</a> &middot; hello&#64;metrowide.co</div>
@@ -275,6 +262,18 @@ Schedule online: <a href="/calendar">metrowide.co/calendar</a></p>
   });
   var mLinks=mobileMenu.querySelectorAll('a');
   for(var i=0;i<mLinks.length;i++){mLinks[i].addEventListener('click',function(){mobileMenu.classList.remove('open')})}
+  var tocLinks=document.querySelectorAll('.toc-sidebar a');
+  var headings=document.querySelectorAll('.article-body h2');
+  window.addEventListener('scroll',function(){
+    var scrollY=window.scrollY;
+    headings.forEach(function(h){
+      if(h.offsetTop-100<=scrollY){
+        tocLinks.forEach(function(l){l.classList.remove('active')});
+        var active=document.querySelector('.toc-sidebar a[href="#'+h.id+'"]');
+        if(active){active.classList.add('active')}
+      }
+    });
+  },{passive:true});
 })();
 </script>
 </body>
