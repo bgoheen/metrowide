@@ -59,6 +59,16 @@
 
   <!-- BLOG POSTS — add new posts below this line in the same format -->
   <url>
+    <loc>https://metrowide.co/minneapolis-property-tax-appeal-guide</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://metrowide.co/divorce-appraisal-guide-for-attorneys</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://metrowide.co/cancel-pmi-minnesota</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
