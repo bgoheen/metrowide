@@ -77,8 +77,8 @@ img{max-width:100%;height:auto;display:block}
 .pay-card h2{font-family:var(--font-display);font-size:1.55rem;line-height:1.2;margin-bottom:.4rem;color:var(--text);font-weight:700;letter-spacing:-.01em}
 .pay-tagline{color:var(--text-light);margin-bottom:1.5rem;font-size:.98rem}
 
-.qr-wrap{background:linear-gradient(180deg,#F8FAFD,#EEF3F8);border-radius:14px;padding:1rem;margin-bottom:1.5rem;display:flex;justify-content:center}
-.qr-wrap img{max-width:280px;width:100%;border-radius:8px}
+.qr-wrap{padding:.5rem 0 1rem;margin-bottom:1rem;display:flex;justify-content:center}
+.qr-wrap img{max-width:280px;width:100%}
 
 .venmo-link{display:flex;align-items:center;justify-content:center;gap:.5rem;background:#008CFF;color:var(--white);font-weight:700;padding:1rem 2.25rem;border-radius:8px;text-align:center;letter-spacing:.04em;text-transform:uppercase;font-size:.95rem;transition:background .2s,transform .15s;width:100%;margin-bottom:1.25rem}
 .venmo-link:hover{background:#0072CC;transform:translateY(-1px)}
@@ -140,7 +140,7 @@ gtag("config","G-SCR29YPPN9");
 
 <header id="main" class="pay-hero"><div class="wrap">
 <h1>Pay Your Invoice</h1>
-<p>Two ways to pay. Venmo is preferred and saves both of us on processing fees.</p>
+<p>Choose Venmo to save $15, or pay by credit card for the convenience.</p>
 </div></header>
 
 <section class="pay-section"><div class="wrap">
@@ -148,9 +148,9 @@ gtag("config","G-SCR29YPPN9");
 <div class="pay-grid">
 
 <div class="pay-card pay-card-preferred">
-<span class="pay-badge">Preferred</span>
+<span class="pay-badge">Save $15</span>
 <h2>Pay with Venmo</h2>
-<p class="pay-tagline">No card fees - so I can keep prices low.</p>
+<p class="pay-tagline">Skip the credit card processing fee and save $15 on your invoice.</p>
 
 <div class="qr-wrap">
 <img src="images/venmo-qr.png" alt="Venmo QR code for &#64;metrowide" width="280" height="310">
@@ -170,7 +170,7 @@ Open Venmo (&#64;metrowide)
 
 <div class="pay-card">
 <h2>Pay by Credit Card</h2>
-<p class="pay-tagline">Quick, secure checkout through Stripe.</p>
+<p class="pay-tagline">Quick, secure checkout through Stripe. Amount includes the card processing fee.</p>
 
 <div class="stripe-cta-wrap">
 <a href="https://buy.stripe.com/6oEdUL3nbgxr6pq144?locale=en&amp;__embed_source=buy_btn_1PpxuMHJ54S4Iaj60MLYxMlV" class="cta cta-block" target="_blank" rel="noopener">
