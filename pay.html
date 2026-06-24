@@ -72,8 +72,6 @@ img{max-width:100%;height:auto;display:block}
 .pay-section{padding:var(--section-pad) 0;background:linear-gradient(180deg,var(--mauve-start) 0%,var(--mauve-end) 100%)}
 .pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.75rem;align-items:start}
 .pay-card{background:var(--white);border-radius:14px;padding:2rem;position:relative;border:1px solid rgba(0,0,0,.05);box-shadow:0 4px 24px rgba(12,21,56,.06)}
-.pay-card-preferred{border:2px solid var(--pink);box-shadow:0 8px 36px rgba(207,22,112,.14)}
-.pay-badge{position:absolute;top:-12px;left:2rem;background:var(--pink);color:var(--white);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.4rem .85rem;border-radius:999px;box-shadow:0 4px 12px rgba(207,22,112,.3)}
 .pay-card h2{font-family:var(--font-display);font-size:1.55rem;line-height:1.2;margin-bottom:.4rem;color:var(--text);font-weight:700;letter-spacing:-.01em}
 .pay-tagline{color:var(--text-light);margin-bottom:1.5rem;font-size:.98rem}
 
@@ -107,7 +105,6 @@ img{max-width:100%;height:auto;display:block}
   .pay-grid{grid-template-columns:1fr;gap:2rem}
   .pay-card{padding:1.5rem}
   .qr-wrap img{max-width:240px}
-  .pay-badge{left:1.25rem}
 }
 @media(max-width:768px){
   .nav-links{display:none}.nav-phone-desktop{display:none}.hamburger{display:flex}
@@ -140,17 +137,16 @@ gtag("config","G-SCR29YPPN9");
 
 <header id="main" class="pay-hero"><div class="wrap">
 <h1>Pay Your Invoice</h1>
-<p>Choose Venmo to save $15, or pay by credit card for the convenience.</p>
+<p>Pay your invoice using either Venmo or credit card, whichever is easier for you.</p>
 </div></header>
 
 <section class="pay-section"><div class="wrap">
 
 <div class="pay-grid">
 
-<div class="pay-card pay-card-preferred">
-<span class="pay-badge">Save $15</span>
+<div class="pay-card">
 <h2>Pay with Venmo</h2>
-<p class="pay-tagline">Skip the credit card processing fee and save $15 on your invoice.</p>
+<p class="pay-tagline">Scan the QR code or tap below to pay with Venmo.</p>
 
 <div class="qr-wrap">
 <img src="images/venmo-qr.png" alt="Venmo QR code for &#64;metrowide" width="280" height="310">
@@ -164,16 +160,15 @@ Open Venmo (&#64;metrowide)
 <ol class="pay-steps">
 <li><span class="pay-step-num">1</span><span>Scan the QR code with your phone's camera, or tap the button above on mobile.</span></li>
 <li><span class="pay-step-num">2</span><span>Send to <strong>&#64;metrowide</strong> and enter the amount from your invoice.</span></li>
-<li><span class="pay-step-num">3</span><span>In the note, include your property address so I can match it to your file.</span></li>
 </ol>
 </div>
 
 <div class="pay-card">
 <h2>Pay by Credit Card</h2>
-<p class="pay-tagline">Quick, secure checkout through Stripe. Amount includes the card processing fee.</p>
+<p class="pay-tagline">Quick, secure checkout through Stripe.</p>
 
 <div class="stripe-cta-wrap">
-<a href="https://buy.stripe.com/14A00j3363DWb5z0rK6Vq03" class="cta cta-block" target="_blank" rel="noopener">
+<a href="https://buy.stripe.com/aFa9AT336a2k8Xr2zS6Vq04" class="cta cta-block" target="_blank" rel="noopener">
 Pay with Credit Card
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
 </a>
