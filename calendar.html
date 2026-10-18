@@ -60,6 +60,7 @@ window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
 gtag("js",new Date());
 gtag("config","G-SCR29YPPN9");
+gtag("config","AW-1062322289");
 </script>
 </head>
 <body>
@@ -86,6 +87,21 @@ Cal("init", "consultation", {origin:"https://app.cal.com"});
   Cal.ns.consultation("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#292929"},"dark":{"cal-brand":"#fafafa"}},"hideEventTypeDetails":false,"layout":"month_view"});
 </script>
 <!-- Cal inline embed code ends -->
+<script>
+/* Google Ads conversion: Consultation Form Submission. Fires once when a Cal.com booking completes. */
+(function(){
+  var fired=false;
+  function reportConversion(){
+    if(fired||typeof gtag!=="function"){return;}
+    fired=true;
+    gtag("event","conversion",{"send_to":"AW-1062322289/kZNECOmEoqEdEPGAx_oD"});
+  }
+  var actions=["bookingSuccessfulV2","bookingSuccessful"];
+  for(var i=0;i<actions.length;i++){
+    Cal.ns.consultation("on",{action:actions[i],callback:reportConversion});
+  }
+})();
+</script>
 </div>
 
 <div class="footer-mini">
