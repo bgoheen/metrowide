@@ -17,133 +17,8 @@
 <meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@600;700&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--dark:#0C1538;--dark-deep:#06082A;--dark-gradient:linear-gradient(180deg,#0C1538 0%,#06082A 100%);--pink:#CF1670;--pink-hover:#B0125F;--cyan:#4FBBD9;--mauve-start:#ECDDE7;--mauve-end:#F4ECF0;--white:#FFFFFF;--off-white:#F8F7FA;--text:#222;--text-light:#555;--text-on-dark:#B8C4D0;--star-gold:#F4B942;--font-display:'Lora',Georgia,serif;--font-body:'DM Sans',-apple-system,sans-serif;--max-w:1080px;--section-pad:clamp(3.5rem,8vw,6rem)}
-html{scroll-behavior:smooth}
-body{font-family:var(--font-body);color:var(--text);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;height:auto;display:block}
-a{color:inherit;text-decoration:none}
-button{font-family:inherit;cursor:pointer;border:none}
-.wrap{max-width:var(--max-w);margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--dark);border-bottom:1px solid rgba(255,255,255,.05);transition:box-shadow .3s}
-.nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.4)}
-.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem);display:flex;align-items:center;justify-content:space-between;height:64px}
-.nav-logo img{height:38px;width:auto}
-.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
-.nav-links a{color:var(--text-on-dark);font-size:.9rem;font-weight:400;transition:color .2s}
-.nav-links a:hover{color:var(--white)}
-.nav-links .dropdown{position:relative}
-.nav-links .dropdown-menu{position:absolute;top:calc(100% + 8px);left:-.75rem;background:var(--dark-deep);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:.5rem 0;min-width:180px;opacity:0;visibility:hidden;transform:translateY(4px);transition:all .2s;box-shadow:0 12px 32px rgba(0,0,0,.4)}
-.nav-links .dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
-.dropdown-menu a{display:block;padding:.55rem 1rem;font-size:.85rem}
-.nav-phone{color:var(--text-on-dark);font-weight:400;font-size:.9rem;white-space:nowrap;transition:color .2s}
-.nav-phone:hover{color:var(--white)}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;padding:4px}
-.hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
-.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--dark-deep);z-index:99;padding:2rem 1.5rem;overflow-y:auto}
-.mobile-menu.open{display:block}
-.mobile-menu a{display:block;color:var(--text-on-dark);font-size:1.05rem;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06);font-weight:400}
-.mobile-menu a:hover{color:var(--white)}
-.mobile-menu .sub-link{padding-left:1rem;font-size:.95rem;color:#8899AA}
-.mobile-menu .mobile-phone{display:inline-block;margin-top:1.5rem;color:var(--cyan);font-weight:700;font-size:1.1rem;border-bottom:none}
-.cta{display:inline-block;background:linear-gradient(180deg,#DA2079 0%,#CF1670 60%,#BC1266 100%);color:var(--white);font-weight:700;font-size:.95rem;padding:1rem 2.25rem;border-radius:8px;letter-spacing:.04em;text-transform:uppercase;transition:transform .15s,box-shadow .2s,background .2s;text-align:center;box-shadow:0 5px 16px rgba(0,0,0,.32),0 2px 10px rgba(207,22,112,.45),inset 0 1px 0 rgba(255,255,255,.30)}
-.cta:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(0,0,0,.36),0 4px 14px rgba(207,22,112,.5),inset 0 1px 0 rgba(255,255,255,.35)}
-.hero{padding-top:calc(64px + clamp(2rem,4vw,3rem));padding-bottom:var(--section-pad);background:var(--dark-gradient);position:relative;overflow:hidden}
-.hero .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
-.hero h1{font-family:var(--font-display);color:var(--white);font-size:clamp(2rem,5vw,3.2rem);line-height:1.2;font-weight:700;max-width:780px;margin-bottom:1.25rem}
-.hero h1 em{font-style:normal;color:var(--cyan)}
-.hero-sub{color:var(--text-on-dark);font-size:clamp(1rem,2.5vw,1.2rem);max-width:600px;margin-bottom:2rem;line-height:1.6}
-.cta-note{color:var(--cyan);font-size:.9rem;margin-top:.85rem}
-.google-badge{display:inline-flex;align-items:center;gap:.6rem;margin-top:2.75rem;text-decoration:none;transition:opacity .2s}
-.google-badge:hover{opacity:.85}
-.google-badge .g-logo{width:28px;height:28px}
-.google-badge .stars{color:var(--star-gold);font-size:1rem;letter-spacing:1px}
-.google-badge .rating-text{color:var(--text-on-dark);font-size:.9rem;gap:.6rem;display:inline-flex;align-items:center}
-.google-badge .rating-text strong{color:var(--white)}
-.problem{padding:var(--section-pad) 0;background:linear-gradient(180deg,var(--mauve-start) 0%,var(--mauve-end) 40%,var(--white) 100%)}
-.problem .wrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.problem-text h2{font-family:var(--font-display);font-size:clamp(1.5rem,3.5vw,2.2rem);line-height:1.25;margin-bottom:1.25rem;color:var(--text);text-wrap:normal}
-.problem-text h2 em{font-style:normal;color:var(--pink)}
-.problem-text p{font-size:1.05rem;color:var(--text);line-height:1.7;margin-bottom:1rem}
-.card-stack{display:flex;flex-direction:column;gap:1rem}
-.pain-card{background:var(--white);border-radius:10px;padding:1.25rem 1.5rem;border-left:4px solid var(--pink);box-shadow:0 2px 12px rgba(0,0,0,.06);font-size:1.05rem;color:var(--text);line-height:1.55}
-.pain-card strong{color:var(--dark)}
-.pillars{padding:var(--section-pad) 0;background:var(--white)}
-.section-label{text-align:center;text-transform:uppercase;font-size:.78rem;font-weight:700;letter-spacing:.12em;color:var(--pink);margin-bottom:.75rem}
-.section-heading{text-align:center;font-family:var(--font-display);font-size:clamp(1.5rem,3.5vw,2.2rem);color:var(--text);margin-bottom:3rem;line-height:1.25}
-.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
-.pillar{text-align:center;padding:2rem 1.5rem;border-radius:12px;background:var(--white)}
-.pillar-icon{width:80px;height:80px;margin:0 auto 1.25rem;display:flex;align-items:center;justify-content:center}
-.pillar-icon svg{width:72px;height:72px}
-.pillar h3{font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:.6rem}
-.pillar p{font-size:1.05rem;color:var(--text-light);line-height:1.6}
-.reviews{padding:var(--section-pad) 0;background:var(--dark-gradient);overflow:hidden}
-.reviews .section-label{color:var(--cyan)}
-.reviews .section-heading{color:var(--white);margin-bottom:2.5rem}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.review-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1.75rem}
-.review-stars{color:var(--star-gold);font-size:.9rem;letter-spacing:2px;margin-bottom:.75rem}
-.review-card blockquote{color:var(--text-on-dark);font-size:1.05rem;line-height:1.6;margin-bottom:1rem}
-.review-footer{display:flex;align-items:center;gap:.75rem}
-.review-photo{width:44px;height:44px;border-radius:50%;object-fit:cover;flex-shrink:0}
-.review-author{font-weight:700;font-size:.85rem;color:var(--white)}
-.review-location{font-size:.8rem;color:#8899AA}
-.services{padding:var(--section-pad) 0;background:var(--off-white)}
-.services-heading{text-align:center;font-family:var(--font-display);font-size:clamp(1.5rem,3.5vw,2.2rem);color:var(--text);margin-bottom:.75rem}
-.services-sub{text-align:center;color:var(--text-light);font-size:1.05rem;margin-bottom:3rem;max-width:560px;margin-left:auto;margin-right:auto}
-.checklist{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:720px;margin:0 auto 3rem}
-.check-item{display:flex;align-items:flex-start;gap:.75rem;background:var(--white);border-radius:10px;padding:1.2rem 1.5rem;border:1px solid rgba(0,0,0,.05);transition:border-color .2s}
-.check-item:hover{border-color:var(--pink)}
-a.check-item{text-decoration:none;color:inherit}
-.check-icon{flex-shrink:0;width:28px;height:28px;background:rgba(207,22,112,.14);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
-.check-icon svg{width:14px;height:14px}
-.check-item h4{font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:.2rem}
-.check-item p{font-size:1.05rem;color:var(--text-light);line-height:1.5}
-.process{padding:var(--section-pad) 0;background:var(--white)}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:3rem}
-.step{text-align:center}
-.step-num{width:44px;height:44px;background:var(--dark);color:var(--cyan);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;margin:0 auto 1rem}
-.step h3{font-family:var(--font-display);font-size:1.1rem;color:var(--text);margin-bottom:.5rem}
-.step p{font-size:1.05rem;color:var(--text-light);line-height:1.6}
-.faq{padding:var(--section-pad) 0;background:var(--off-white)}
-.faq-list{max-width:700px;margin:0 auto}
-.faq-item{border-bottom:1px solid rgba(0,0,0,.08)}
-.faq-q{width:100%;background:none;text-align:left;padding:1.25rem 0;font-size:1.05rem;font-weight:700;color:var(--text);display:flex;justify-content:space-between;align-items:center;gap:1rem;line-height:1.4}
-.faq-q::after{content:'+';font-size:1.4rem;font-weight:400;color:var(--pink);flex-shrink:0}
-.faq-item.open .faq-q::after{content:'\2212'}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
-.faq-item.open .faq-a{max-height:300px}
-.faq-a p{padding-bottom:1.25rem;font-size:1.05rem;color:var(--text);line-height:1.65}
-.final-cta{padding:var(--section-pad) 0;background:var(--dark-gradient);text-align:center}
-.final-cta h2{font-family:var(--font-display);font-size:clamp(1.5rem,4vw,2.4rem);color:var(--white);margin-bottom:.75rem}
-.final-cta p{color:var(--text-on-dark);font-size:1.05rem;margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto}
-.footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding:2.5rem 0}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-left{font-size:.85rem;color:#8899AA}
-.footer-left a{color:var(--text-on-dark)}
-.footer-left a:hover{color:var(--cyan)}
-.footer-right{display:flex;gap:2rem;font-size:.85rem}
-.footer-right a{color:var(--text-on-dark)}
-.footer-right a:hover{color:var(--cyan)}
-@media(max-width:768px){
-  .nav-links{display:none}.nav-phone-desktop{display:none}.hamburger{display:flex}
-  .hero{padding-top:calc(64px + 1.75rem)}
-  .problem .wrap{grid-template-columns:1fr;gap:2rem}
-  .pillars-grid{grid-template-columns:1fr;gap:1rem}
-  .pillar{display:flex;align-items:center;text-align:left;gap:1rem;padding:1.25rem}
-  .pillar-icon{margin:0;flex-shrink:0;width:56px;height:56px}.pillar-icon svg{width:48px;height:48px}
-  .pillar h3{margin-bottom:.2rem}
-  .reviews-grid{grid-template-columns:1fr;gap:1rem}
-  .checklist{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr;gap:1.5rem}
-  .footer-inner{flex-direction:column;text-align:center}
-}
-@media(min-width:769px) and (max-width:1024px){.reviews-grid{grid-template-columns:1fr 1fr}}
-h1,h2{text-wrap:balance}*:focus-visible{outline:2px solid var(--pink);outline-offset:2px;border-radius:2px}.skip-link{position:absolute;left:-9999px;top:0;background:var(--pink);color:var(--white);padding:.75rem 1rem;z-index:1000;text-decoration:none;font-weight:700;border-radius:0 0 6px 0}.skip-link:focus{left:0}.nav-links a[aria-current=page]{color:var(--white)}.pillar{transition:transform .2s ease}.pillar:hover{transform:translateY(-2px)}.review-card{transition:transform .2s ease,border-color .2s ease}.review-card:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.16)}.cta:active{transform:translateY(0) scale(.98)}.hero h1{font-family:var(--font-display);color:var(--white);font-size:clamp(2.4rem,6.5vw,4.5rem);line-height:1.08;letter-spacing:-.02em;font-weight:700;max-width:880px;margin-bottom:1.5rem}.hero{padding-top:calc(64px + clamp(2.5rem,5vw,4.5rem));padding-bottom:calc(var(--section-pad) + 1rem)}.hero-sub{color:var(--text-on-dark);font-size:clamp(1.05rem,2vw,1.3rem);max-width:640px;margin-bottom:2.5rem;line-height:1.55}@media(max-width:768px){.hero h1{text-wrap:normal}}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(2rem,4vw,3.5rem);text-align:center;max-width:920px;margin:0 auto}.stat{padding:0 1rem}.stat-num{font-family:var(--font-display);font-size:clamp(3.5rem,8vw,5.5rem);font-weight:700;line-height:1;color:var(--text);letter-spacing:-.025em;margin-bottom:.6rem}.stat-num .star{color:var(--star-gold);font-size:.55em;margin-left:.12em;vertical-align:.32em}.stat-label{font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:.65rem;font-family:var(--font-display)}.stat-desc{font-size:.98rem;color:var(--text-light);line-height:1.55;max-width:280px;margin:0 auto}@media(max-width:768px){.stats{grid-template-columns:1fr;gap:2.25rem;max-width:360px}.stat-num{font-size:3.75rem}}.meet-ben{padding:var(--section-pad) 0;background:var(--white)}.meet-ben-inner{display:grid;grid-template-columns:0.85fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center;max-width:920px;margin:0 auto}.meet-ben-photo img{width:100%;height:auto;border-radius:12px;object-fit:cover;aspect-ratio:1/1.05}.meet-ben-content .section-label{text-align:left;margin-bottom:.5rem}.meet-ben-content h2{font-family:var(--font-display);font-size:clamp(1.8rem,3.8vw,2.6rem);line-height:1.12;color:var(--text);margin-bottom:1.25rem;font-weight:700;letter-spacing:-.015em}.meet-ben-title{font-size:.95rem;font-weight:700;color:var(--pink);margin-bottom:1.25rem;letter-spacing:.01em}
-.meet-ben-intro{font-size:1.05rem;color:var(--text);line-height:1.7;margin-bottom:1rem}.meet-ben-cred{font-size:.92rem;color:var(--text-light);line-height:1.6;margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid rgba(0,0,0,.08)}.meet-ben-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.25rem;color:var(--pink);font-weight:700;font-size:.95rem;transition:gap .2s}.meet-ben-link:hover{gap:.7rem;color:var(--pink-hover)}@media(max-width:768px){.meet-ben-inner{grid-template-columns:1fr;gap:2rem}.meet-ben-photo img{max-width:380px;margin:0 auto;aspect-ratio:1/1.05}.meet-ben-content{text-align:left}}.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:start}.reviews-col{display:flex;flex-direction:column;gap:1.5rem}.review-card{display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1.75rem}@media(max-width:1024px){.reviews-grid{grid-template-columns:1fr 1fr}.reviews-col{display:contents}}@media(max-width:640px){.reviews-grid{grid-template-columns:1fr;gap:1rem}}.services-featured{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:720px;margin:0 auto 1rem}.service-featured{display:block;position:relative;background:var(--white);border-radius:12px;padding:1.75rem 1.75rem 1.75rem 1.75rem;border:1px solid rgba(0,0,0,.05);transition:border-color .2s,transform .2s;text-decoration:none;color:inherit}.service-featured:hover{border-color:var(--pink);transform:translateY(-2px)}.service-featured h4{font-family:var(--font-display);font-size:1.25rem;font-weight:700;color:var(--text);margin-bottom:.55rem;padding-right:1.5rem}.service-featured p{font-size:1rem;color:var(--text-light);line-height:1.55}.service-featured .arrow{position:absolute;top:1.85rem;right:1.5rem;color:var(--pink);font-size:1.2rem;line-height:1;transition:transform .2s}.service-featured:hover .arrow{transform:translateX(3px)}.services-secondary{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.75rem;max-width:720px;margin:0 auto 3rem}.service-tile{display:block;background:var(--white);border-radius:10px;padding:1.1rem 1.25rem;border:1px solid rgba(0,0,0,.05);transition:border-color .2s,transform .2s;text-decoration:none;color:inherit}.service-tile:hover{border-color:var(--pink);transform:translateY(-1px)}.service-tile h4{font-size:1.02rem;font-weight:700;color:var(--text);margin-bottom:.3rem}.service-tile p{font-size:.95rem;color:var(--text-light);line-height:1.5}@media(max-width:540px){.services-featured{grid-template-columns:1fr;gap:.75rem}.services-secondary{grid-template-columns:1fr;gap:.6rem}}.footer-inner{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:clamp(2rem,4vw,3.5rem);align-items:start;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.08)}.footer-brand{display:flex;flex-direction:column;gap:.65rem}.footer-brand img{height:42px;width:42px;margin-bottom:.4rem}.footer-brand a{color:var(--text-on-dark);font-size:.9rem;line-height:1.5;transition:color .2s}.footer-brand a:hover{color:var(--cyan)}.footer-col h4{font-family:var(--font-display);color:var(--white);font-size:.95rem;font-weight:700;margin-bottom:.85rem;letter-spacing:.01em}.footer-col a{display:block;color:var(--text-on-dark);font-size:.88rem;padding:.3rem 0;transition:color .2s}.footer-col a:hover{color:var(--cyan)}.footer-bottom{padding-top:1.5rem;font-size:.82rem;color:#7A8294;text-align:left}@media(max-width:768px){.footer-inner{grid-template-columns:1fr;gap:2rem;text-align:left;padding-bottom:1.5rem}.footer-bottom{text-align:left}}.final-cta p,.article-cta p,.hero-sub,.services-sub,.map-intro,.stat-desc{text-wrap:balance}@media(max-width:480px){.hero h1{font-size:2rem!important}}.call-bar{display:none}@media(max-width:768px){.call-bar{display:flex;position:fixed;left:14px;right:14px;bottom:calc(8px + env(safe-area-inset-bottom));z-index:98;align-items:center;justify-content:center;gap:.6rem;height:56px;border-radius:16px;background:var(--cyan);color:var(--dark);font-weight:700;font-size:1.2rem;letter-spacing:.01em;box-shadow:0 8px 22px rgba(79,187,217,.42),0 3px 10px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.45)}.call-bar svg{width:21px;height:21px;fill:currentColor}.call-bar:active{background:#439FB8}body{padding-bottom:calc(90px + env(safe-area-inset-bottom))}}</style>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&amp;family=Permanent+Marker&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -243,15 +118,15 @@ h1,h2{text-wrap:balance}*:focus-visible{outline:2px solid var(--pink);outline-of
       "name": "How much does an appraisal cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A typical single-family home, townhome, or condo appraisal costs $550. Complex properties (unique design, acreage, or multi-family) may cost more - contact us for an exact quote."
+        "text": "A typical single-family home, townhome or condo appraisal is $550. Complex properties (unique design, acreage or multi-family) may cost more. Call for an exact quote."
       }
     },
     {
       "@type": "Question",
-      "name": "What affects the home value?",
+      "name": "What affects my home's value?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Several factors determine your home's appraised value, including recent comparable sales in your area, your home's size, condition, and location, current market trends, and any upgrades or renovations."
+        "text": "Recent comparable sales in your area, your home's size, condition and location, current market trends, and any upgrades or renovations."
       }
     },
     {
@@ -259,7 +134,7 @@ h1,h2{text-wrap:balance}*:focus-visible{outline:2px solid var(--pink);outline-of
       "name": "How do I prepare for the inspection?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "While appraisers focus on objective data, a clean, well-maintained home can make a good impression. Ensure easy access to all areas, fix minor repairs, and provide a list of recent updates."
+        "text": "Appraisers focus on objective data, but a clean, well-kept home still helps. Make sure every area is easy to get to, take care of small repairs, and have a list of recent updates ready."
       }
     },
     {
@@ -267,7 +142,7 @@ h1,h2{text-wrap:balance}*:focus-visible{outline:2px solid var(--pink);outline-of
       "name": "How long does it take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The on-site inspection usually takes 30-60 minutes. Your full report is often ready within a few days, depending on property complexity."
+        "text": "The on-site visit usually takes 30-60 minutes. Your report is often ready within a few days, depending on the property."
       }
     },
     {
@@ -275,7 +150,7 @@ h1,h2{text-wrap:balance}*:focus-visible{outline:2px solid var(--pink);outline-of
       "name": "Is an appraisal the same as a home inspection?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No - an appraisal estimates market value, while a home inspection checks for structural or mechanical issues. They serve different purposes."
+        "text": "No. An appraisal estimates market value. A home inspection checks for structural or mechanical issues. They serve different purposes."
       }
     },
     {
@@ -283,7 +158,7 @@ h1,h2{text-wrap:balance}*:focus-visible{outline:2px solid var(--pink);outline-of
       "name": "Can I use an old appraisal?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most legal cases require a recent appraisal (usually within 6 months). If the market has changed, you'll need an updated report."
+        "text": "Most legal cases need an appraisal from the last 6 months. If the market has changed, you'll need an updated report."
       }
     }
   ]
@@ -324,207 +199,253 @@ gtag("config","AW-1062322289/6YHqCNm5rKEdEPGAx_oD",{"phone_conversion_number":"6
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
-<nav class="nav" id="nav"><div class="nav-inner">
-<a href="/" class="nav-logo"><img src="images/Minnesota-home-appraisal.webp" alt="Metrowide Appraisals" width="38" height="38"></a>
-<ul class="nav-links"><li><a aria-current="page" href="/">Home</a></li><li class="dropdown"><a href="#">Appraisal Types &#9662;</a><div class="dropdown-menu"><a href="/divorce-appraisal">Divorce</a><a href="/estate-appraisal">Estate</a><a href="/selling-your-home">Selling Your Home</a><a href="/pmi-removal-appraisal">PMI Removal</a><a href="/tax-appeal-appraisal">Tax Appeal</a></div></li><li><a href="/service-area">Service Area</a></li><li><a href="/blog">Blog</a></li><li><a href="/about">About</a></li></ul>
-<a href="tel:6515054400" class="nav-phone nav-phone-desktop">651-505-4400</a>
-<button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
-</div></nav>
-<div class="mobile-menu" id="mobileMenu"><a href="/">Home</a><a href="/divorce-appraisal" class="sub-link">Divorce Appraisal</a><a href="/estate-appraisal" class="sub-link">Estate Appraisal</a><a href="/selling-your-home" class="sub-link">Selling Your Home</a><a href="/pmi-removal-appraisal" class="sub-link">PMI Removal Appraisal</a><a href="/tax-appeal-appraisal" class="sub-link">Tax Appeal Appraisal</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/service-area">Service Area</a><a href="tel:6515054400" class="mobile-phone">651-505-4400</a></div>
-
-<header id="main" class="hero"><div class="wrap">
-<h1>An honest answer on what your <em>Twin Cities home</em> is actually worth</h1>
-<p class="hero-sub">Divorce, estate settlement, or your next move, you need a valuation built for you, not a bank</p>
-<a href="/calendar" class="cta">Schedule My Free Consultation</a>
-<p class="cta-note">No sales pressure, just a quick chat.</p>
-<a href="https://maps.app.goo.gl/CwZ1ora6D4khSx4t9" target="_blank" rel="noopener" class="google-badge">
-<svg class="g-logo" viewBox="0 0 24 24" width="28" height="28"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.58c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.58-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-<span class="rating-text"><strong>4.7</strong> based on 63 reviews</span>
-</a>
-</div></header>
-
-<section class="problem"><div class="wrap">
-<div class="problem-text">
-<h2>What's Your Home <em>Really</em> Worth?</h2>
-<p>Guessing can be costly. An inaccurate valuation does more than miss the mark - it fuels arguments in a divorce, triggers painful disputes among heirs, or leaves thousands of dollars on the table when you sell.</p>
-<p><strong>You shouldn't have to defend a guess.</strong></p>
-<p>For 25 years, I've given Twin Cities homeowners independent, data-backed appraisals that hold up under legal scrutiny. You get a definitive answer, not a guess - delivered fast, and ready for court.</p>
-</div>
-<div class="problem-visual"><div class="card-stack">
-<div class="pain-card"><strong>Divorce:</strong> Without a credible appraisal, property division becomes a costly battle of opinions.</div>
-<div class="pain-card"><strong>Estate Settlement:</strong> Heirs need a defensible value to settle fairly and satisfy the courts.</div>
-<div class="pain-card"><strong>Selling Your Home:</strong> Price too high and you sit. Price too low and you leave money on the table.</div>
-</div></div>
-</div></section>
-
-<section class="pillars"><div class="wrap">
-<p class="section-label">Why Homeowners Choose Us</p>
-<h2 class="section-heading">Twenty-Five Years In Numbers</h2>
-<div class="stats">
-<div class="stat">
-<div class="stat-num">25</div>
-<div class="stat-label">Years of experience</div>
-<p class="stat-desc">Twin Cities residential appraisals since 2001. Independent, defensible, on time.</p>
-</div>
-<div class="stat">
-<div class="stat-num">3-5</div>
-<div class="stat-label">Day turnaround</div>
-<p class="stat-desc">Fast enough for court deadlines, estate filings, and time-sensitive sales.</p>
-</div>
-<div class="stat">
-<div class="stat-num">4.7<span class="star">&#9733;</span></div>
-<div class="stat-label">Google reviews</div>
-<p class="stat-desc">Verified across 63 reviews from real Twin Cities homeowners.</p>
+<div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Divorce</span><span aria-hidden="true">/</span><span>Estate &amp; probate</span><span aria-hidden="true">/</span><span>Selling your home</span><span aria-hidden="true">/</span><span>3-5 day turnaround</span><span aria-hidden="true">/</span><span>4.7 stars on Google</span><span aria-hidden="true">/</span><span>Twin Cities since 2001</span><span aria-hidden="true">/</span><span>Divorce</span><span aria-hidden="true">/</span><span>Estate &amp; probate</span><span aria-hidden="true">/</span><span>Selling your home</span><span aria-hidden="true">/</span><span>3-5 day turnaround</span><span aria-hidden="true">/</span><span>4.7 stars on Google</span><span aria-hidden="true">/</span><span>Twin Cities since 2001</span><span aria-hidden="true">/</span></div></div>
+<header class="site-header" id="siteHeader">
+<div class="hdr">
+<a href="/" class="logo" aria-label="Metrowide Appraisals home"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M21.7 69.8 A40 40 0 1 1 78.3 69.8 L50 98.1 Z" fill="#FF4F1A"></path><path d="M47 25.4 L5 67.4 M66.3 44.7 L20 91" fill="none" stroke="#0C1538" stroke-width="6.5" stroke-linecap="round"></path></svg><span class="logo-text"><span class="logo-word">Metrowide</span><span class="logo-sub">APPRAISALS</span></span></a>
+<nav aria-label="Main">
+<ul class="nav">
+<li class="nav-drop"><button type="button" class="nav-drop-btn" aria-expanded="false" aria-haspopup="true">Appraisal types <svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><div class="nav-drop-menu"><a href="/divorce-appraisal">Divorce / separation</a><a href="/estate-appraisal">Estate &amp; probate</a><a href="/selling-your-home">Selling your home</a><a href="/pmi-removal-appraisal">PMI removal</a><a href="/tax-appeal-appraisal">Tax appeal</a></div></li>
+<li><a href="/service-area">Areas served</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="/blog">Blog</a></li>
+<li><a href="/about">About</a></li>
+</ul>
+</nav>
+<a href="tel:6515054400" class="hdr-phone">651-505-4400</a>
+<div class="hdr-mob">
+<a href="tel:6515054400" class="icon-btn call" aria-label="Call 651-505-4400"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"></path></svg></a>
+<button type="button" class="icon-btn menu" id="menuBtn" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path></svg></button>
 </div>
 </div>
-</div></section>
-
-<section class="meet-ben"><div class="wrap">
-<div class="meet-ben-inner">
-<div class="meet-ben-photo">
-<img src="images/ben-goheen.jpg" alt="Ben Goheen, Minnesota Certified Residential Appraiser" width="500" height="525" loading="lazy">
-</div>
-<div class="meet-ben-content">
-<p class="section-label">Meet Your Appraiser</p>
-<h2>Hi, I'm Ben Goheen.</h2>
-<p class="meet-ben-title">Minnesota Certified Residential Appraiser</p>
-<p class="meet-ben-intro">No two appraisals are the same - and unlike appraisers who work for the big mortgage lenders, I work for you. My job isn't just filling out a bank's form, it's understanding what actually makes your home, your neighborhood, and your market different.</p>
-<p class="meet-ben-intro">When you call, you speak to a human.</p>
-<p class="meet-ben-intro">When you have questions about your report, I take the time to answer them.</p>
-<p class="meet-ben-cred">License #20303548<br>Serving the Twin Cities since 2001</p>
-<a href="/about" class="meet-ben-link">More about me <span>&rarr;</span></a>
-</div>
-</div>
-</div></section>
-
-<section class="reviews" id="reviews"><div class="wrap">
-<p class="section-label">Real Homeowners, Real Results</p>
-<h2 class="section-heading">Meet Some of the Homeowners We've Already Helped</h2>
-<div class="reviews-grid">
-<div class="reviews-col">
-<div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Professional and easy to work with."</blockquote><div class="review-footer"><img class="review-photo" src="images/Ryan_S.jpg" alt="Ryan S." width="44" height="44" loading="lazy"><div><div class="review-author">Ryan S.</div><div class="review-location">Lino Lakes</div></div></div></div>
-<div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"The report was organized and easy to read and understand."</blockquote><div class="review-footer"><img class="review-photo" src="images/Lila_S.jpeg" alt="Lila S." width="44" height="44" loading="lazy"><div><div class="review-author">Lila S.</div><div class="review-location">Shoreview</div></div></div></div>
-<div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Prompt response, quick service, and super fast results. Very professional throughout."</blockquote><div class="review-footer"><img class="review-photo" src="images/Dylan_S.jpg" alt="Dylan S." width="44" height="44" loading="lazy"><div><div class="review-author">Dylan S.</div><div class="review-location">St. Paul</div></div></div></div>
-</div>
-<div class="reviews-col">
-<div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Prompt, personable, answered all of my questions and a fabulously quick turnaround for the report."</blockquote><div class="review-footer"><img class="review-photo" src="images/Amelia_V.jpg" alt="Amelia V." width="44" height="44" loading="lazy"><div><div class="review-author">Amelia V.</div><div class="review-location">Mendota Heights</div></div></div></div>
-<div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Thorough, friendly, and professional!"</blockquote><div class="review-footer"><img class="review-photo" src="images/Kelly_S.jpg" alt="Kelly S." width="44" height="44" loading="lazy"><div><div class="review-author">Kelly S.</div><div class="review-location">Brooklyn Park</div></div></div></div>
-<div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Answered all my questions, scheduling was a breeze, valued the property quickly with really fast turnaround!"</blockquote><div class="review-footer"><img class="review-photo" src="images/Amanda_H.jpeg" alt="Amanda H." width="44" height="44" loading="lazy"><div><div class="review-author">Amanda H.</div><div class="review-location">Minneapolis</div></div></div></div>
-</div>
-<div class="reviews-col">
-<div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Very professional and explained the appraisal process in plain, easy to understand terms. Quick turnaround time!"</blockquote><div class="review-footer"><img class="review-photo" src="images/Michelle_G.jpg" alt="Michelle G." width="44" height="44" loading="lazy"><div><div class="review-author">Michelle G.</div><div class="review-location">Minneapolis</div></div></div></div>
-<div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Great customer service, always kept me updated. Got all 3 appraisals done quickly with great quality."</blockquote><div class="review-footer"><img class="review-photo" src="images/Laura_D.jpeg" alt="Laura D." width="44" height="44" loading="lazy"><div><div class="review-author">Laura D.</div><div class="review-location">White Bear Lake</div></div></div></div>
-<div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Very helpful and quick! Scheduled me fast and turned around the report sooner than I expected."</blockquote><div class="review-footer"><img class="review-photo" src="images/Justyn_E.jpeg" alt="Justyn E." width="44" height="44" loading="lazy"><div><div class="review-author">Justyn E.</div><div class="review-location">North St. Paul</div></div></div></div>
-</div>
-</div>
-</div></section>
-
-<section class="services"><div class="wrap">
-<p class="section-label">Our Services</p>
-<h2 class="services-heading">Are You In the Right Place?</h2>
-<p class="services-sub">I specialize in appraisals where accuracy and credibility matter most.</p>
-<div class="services-featured">
-<a href="/divorce-appraisal" class="service-featured">
-<h4>Divorce Appraisals</h4>
-<p>A fair, court-ready value so you and your spouse can divide the home and move forward.</p>
-<span class="arrow">&rarr;</span>
-</a>
-<a href="/estate-appraisal" class="service-featured">
-<h4>Estate &amp; Probate Valuations</h4>
-<p>A clear, dependable value for probate, trust, or a loved one's estate.</p>
-<span class="arrow">&rarr;</span>
-</a>
-</div>
-<div class="services-secondary">
-<a href="/tax-appeal-appraisal" class="service-tile"><h4>Tax Appeal Appraisals</h4><p>Independent valuations to support your tax appeal.</p></a>
-<a href="/pmi-removal-appraisal" class="service-tile"><h4>PMI Removal</h4><p>Prove your equity to drop private mortgage insurance.</p></a>
-<a href="/selling-your-home" class="service-tile"><h4>For Sale by Owner</h4><p>Price your home right with a market value opinion.</p></a>
-</div>
-<div style="text-align:center"><a href="/calendar" class="cta">Schedule My Free Consultation</a></div>
-</div></section>
-
-<section class="process"><div class="wrap">
-<p class="section-label">Simple and Straightforward</p>
-<h2 class="section-heading">How It Works</h2>
-<div class="steps">
-<div class="step"><div class="step-num">1</div><h3>Free Consultation</h3><p>Tell me about your situation. I'll explain the process and give you an exact quote - no pressure, no obligation.</p></div>
-<div class="step"><div class="step-num">2</div><h3>On-Site Inspection</h3><p>I'll visit your property for a 30-60 minute inspection, gathering the data I need for an accurate valuation.</p></div>
-<div class="step"><div class="step-num">3</div><h3>Receive Your Report</h3><p>You get a thorough, court-ready appraisal report - typically within a few days of the inspection.</p></div>
-</div>
-<div style="text-align:center"><a href="/calendar" class="cta">Get Started - It's Free to Talk</a></div>
-</div></section>
-
-<section class="faq" id="faq"><div class="wrap">
-<p class="section-label">Frequently Asked Questions</p>
-<h2 class="section-heading">Got Questions? We've Got Answers.</h2>
-<div class="faq-list">
-<div class="faq-item open"><button class="faq-q">How much does an appraisal cost?</button><div class="faq-a"><p>A typical single-family home, townhome, or condo appraisal costs $550. Complex properties (unique design, acreage, or multi-family) may cost more - contact us for an exact quote.</p></div></div>
-<div class="faq-item"><button class="faq-q">What affects the home value?</button><div class="faq-a"><p>Several factors determine your home's appraised value, including recent comparable sales in your area, your home's size, condition, and location, current market trends, and any upgrades or renovations.</p></div></div>
-<div class="faq-item"><button class="faq-q">How do I prepare for the inspection?</button><div class="faq-a"><p>While appraisers focus on objective data, a clean, well-maintained home can make a good impression. Ensure easy access to all areas, fix minor repairs, and provide a list of recent updates.</p></div></div>
-<div class="faq-item"><button class="faq-q">How long does it take?</button><div class="faq-a"><p>The on-site inspection usually takes 30-60 minutes. Your full report is often ready within a few days, depending on property complexity.</p></div></div>
-<div class="faq-item"><button class="faq-q">Is an appraisal the same as a home inspection?</button><div class="faq-a"><p>No - an appraisal estimates market value, while a home inspection checks for structural or mechanical issues. They serve different purposes.</p></div></div>
-<div class="faq-item"><button class="faq-q">Can I use an old appraisal?</button><div class="faq-a"><p>Most legal cases require a recent appraisal (usually within 6 months). If the market has changed, you'll need an updated report.</p></div></div>
-</div>
-</div></section>
-
-<section class="final-cta"><div class="wrap">
-<h2>Get the Clarity You Need</h2>
-<p>Let's discuss your next steps - no obligation, no sales pressure.</p>
-<a href="/calendar" class="cta">Schedule My Free Consultation</a>
-</div></section>
-
-<footer class="footer"><div class="wrap">
-<div class="footer-inner">
-<div class="footer-brand">
-<img src="images/Minnesota-home-appraisal.webp" alt="Metrowide Appraisals" width="42" height="42">
-<a href="tel:6515054400">651-505-4400</a>
-<a href="mailto:hello&#64;metrowide.co">hello&#64;metrowide.co</a>
-</div>
-<div class="footer-col">
-<h4>Services</h4>
-<a href="/divorce-appraisal">Divorce Appraisal</a>
-<a href="/estate-appraisal">Estate Appraisal</a>
-<a href="/tax-appeal-appraisal">Tax Appeal Appraisal</a>
-<a href="/pmi-removal-appraisal">PMI Removal Appraisal</a>
-<a href="/selling-your-home">Selling Your Home</a>
-</div>
-<div class="footer-col">
-<h4>About</h4>
-<a href="/about">About</a>
+<nav class="mnav" id="mnav" aria-label="Mobile">
+<a href="/" aria-current="page">Home</a>
+<a class="sub" href="/divorce-appraisal">Divorce / separation</a><a class="sub" href="/estate-appraisal">Estate &amp; probate</a><a class="sub" href="/selling-your-home">Selling your home</a><a class="sub" href="/pmi-removal-appraisal">PMI removal</a><a class="sub" href="/tax-appeal-appraisal">Tax appeal</a>
+<a href="/service-area">Areas served</a>
+<a href="#reviews">Reviews</a>
 <a href="/blog">Blog</a>
-<a href="/service-area">Service Area</a>
-<a href="/privacy">Privacy Policy</a>
+<a href="/about">About</a>
+<a href="tel:6515054400" class="mnav-call">Call 651-505-4400</a>
+</nav>
+</header>
+<main id="main">
+
+<div class="top">
+<section class="hero" aria-labelledby="hero-h">
+<div class="hero-copy">
+<span class="kicker">An honest answer on</span>
+<h1 id="hero-h">What's your home really worth?</h1>
+<p class="hero-sub">Independent appraisals for divorce, estates and selling in the Twin Cities. Built for you, not a bank.</p>
+<div class="hero-actions">
+<a href="/calendar" class="btn btn-lg">Schedule my free consult</a>
+<a href="tel:6515054400" class="hero-call">or call 651-505-4400</a>
+</div>
+<a href="https://maps.app.goo.gl/CwZ1ora6D4khSx4t9" target="_blank" rel="noopener" class="rating">
+<span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"></path></svg><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"></path></svg><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"></path></svg><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"></path></svg><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"></path></svg></span>
+<strong>4.7</strong><span class="muted">from 63 Google reviews</span>
+</a>
+</div>
+<div class="tag-wrap">
+<div class="tag">
+<span class="tag-hole" aria-hidden="true"></span>
+<div class="tag-who">
+<img src="images/ben-headshot.jpg" alt="Ben Goheen" width="64" height="64">
+<div><strong>Ben Goheen</strong><br><span>Certified Residential Appraiser</span></div>
+</div>
+<div class="tag-price">$550</div>
+<div class="tag-note">Most homes. Flat fee.</div>
+<span class="sticker">No surprises</span>
 </div>
 </div>
-<div class="footer-bottom">&copy; 2026 Metrowide Appraisals. All rights reserved.</div>
-</div></footer>
+</section>
+<div class="proof">
+<ul>
+<li><svg class="check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12.5l5 5L20 6.5"></path></svg><span><strong>3-5 day</strong> turnaround</span></li>
+<li><svg class="check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12.5l5 5L20 6.5"></path></svg><span><strong>25 years</strong> local</span></li>
+<li><svg class="check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12.5l5 5L20 6.5"></path></svg><span><strong>Court-ready</strong> reports</span></li>
+<li><svg class="check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12.5l5 5L20 6.5"></path></svg><span><strong>No</strong> sales pressure</span></li>
+</ul>
+</div>
+</div>
 
-<a href="tel:6515054400" class="call-bar" aria-label="Call (651) 505-4400"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.02l-2.21 2.21z"/></svg><span>651-505-4400</span></a>
+<section class="sec" id="menu" aria-labelledby="menu-h">
+<div class="wrap">
+<div class="sec-head">
+<h2 class="h-xl" id="menu-h">The menu</h2>
+<p>I specialize in appraisals where accuracy and credibility matter most. Pick your reason.</p>
+</div>
+<div class="grid3">
+<a href="/divorce-appraisal" class="svc-card lift">
+<span class="svc-title">Divorce / separation</span>
+<p>A fair, court-ready value so you and your partner can divide the home and move forward.</p>
+<span class="svc-more">Learn more &rarr;</span>
+</a>
+<a href="/estate-appraisal" class="svc-card lift">
+<span class="svc-title">Estate &amp; probate</span>
+<p>A clear, dependable value for probate, trust, or a loved one's estate.</p>
+<span class="svc-more">Learn more &rarr;</span>
+</a>
+<a href="/selling-your-home" class="svc-card lift">
+<span class="svc-title">Selling your home</span>
+<p>Price too high and you sit. Price too low and you leave money on the table.</p>
+<span class="svc-more">Learn more &rarr;</span>
+</a>
+</div>
+<div class="notsure">
+<div class="notsure-text">
+<span class="notsure-title">Not sure which one you need?</span>
+<span>Tell me what's going on. I'll tell you what you need, and what you don't.</span>
+</div>
+<a href="/calendar" class="btn">Ask me, it's free</a>
+</div>
+</div>
+</section>
 
-<script>
-(function(){
-  var nav=document.getElementById('nav');
-  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>20)},{passive:true});
-  var hamburger=document.getElementById('hamburger');
-  var mobileMenu=document.getElementById('mobileMenu');
-  hamburger.addEventListener('click',function(){
-    mobileMenu.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded',mobileMenu.classList.contains('open'));
-  });
-  var mLinks=mobileMenu.querySelectorAll('a');
-  for(var i=0;i<mLinks.length;i++){mLinks[i].addEventListener('click',function(){mobileMenu.classList.remove('open')})}
-  var faqBtns=document.querySelectorAll('.faq-q');
-  for(var j=0;j<faqBtns.length;j++){
-    faqBtns[j].addEventListener('click',function(){
-      var item=this.parentElement;
-      var wasOpen=item.classList.contains('open');
-      var allItems=document.querySelectorAll('.faq-item');
-      for(var k=0;k<allItems.length;k++){allItems[k].classList.remove('open')}
-      if(!wasOpen){item.classList.add('open')}
-    });
-  }
-})();
-</script>
+<section class="reviews" id="reviews" aria-labelledby="reviews-h">
+<div class="wrap">
+<span class="kicker">63 reviews and counting</span>
+<h2 class="h-xl" id="reviews-h">People say nice things</h2>
+<div class="grid3">
+<figure class="quote-card">
+<blockquote>
+<span class="quote-big">&ldquo;A fabulously quick turnaround&rdquo;</span>
+<span>"Prompt, personable, answered all of my questions and a fabulously quick turnaround for the report."</span>
+</blockquote>
+<figcaption class="quote-who"><img src="images/Amelia_V.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Amelia V.</strong><br><span class="where">Mendota Heights</span></span></figcaption>
+</figure>
+<figure class="quote-card">
+<blockquote>
+<span class="quote-big">&ldquo;Plain, easy to understand terms&rdquo;</span>
+<span>"Very professional and explained the appraisal process in plain, easy to understand terms. Quick turnaround time!"</span>
+</blockquote>
+<figcaption class="quote-who"><img src="images/Michelle_G.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Michelle G.</strong><br><span class="where">Minneapolis</span></span></figcaption>
+</figure>
+<figure class="quote-card">
+<blockquote>
+<span class="quote-big">&ldquo;Always kept me updated&rdquo;</span>
+<span>"Great customer service, always kept me updated. Got all 3 appraisals done quickly with great quality."</span>
+</blockquote>
+<figcaption class="quote-who"><img src="images/Laura_D.jpeg" alt="" width="52" height="52" loading="lazy"><span><strong>Laura D.</strong><br><span class="where">White Bear Lake</span></span></figcaption>
+</figure>
+</div>
+<div class="grid3" style="margin-top:16px">
+<p class="mini-quote"><strong>"Professional and easy to work with."</strong><br>Ryan S., Lino Lakes</p>
+<p class="mini-quote"><strong>"Thorough, friendly, and professional!"</strong><br>Kelly S., Brooklyn Park</p>
+<p class="mini-quote"><strong>"The report was organized and easy to read and understand."</strong><br>Lila S., Shoreview</p>
+<p class="mini-quote"><strong>"Prompt response, quick service, and super fast results."</strong><br>Dylan S., St. Paul</p>
+<p class="mini-quote"><strong>"Scheduling was a breeze."</strong><br>Amanda H., Minneapolis</p>
+<p class="mini-quote"><strong>"Turned around the report sooner than I expected."</strong><br>Justyn E., North St. Paul</p>
+</div>
+<div class="more"><a href="https://maps.app.goo.gl/CwZ1ora6D4khSx4t9" target="_blank" rel="noopener" class="btn btn-navy">Read all 63 on Google</a></div>
+</div>
+</section>
+
+<section class="sec band-navy" id="how" aria-labelledby="how-h">
+<div class="wrap how">
+<div class="how-intro">
+<h2 class="h-xl" id="how-h">Built for you.<br><span>Not a bank.</span></h2>
+<p>A guess is expensive. The wrong number can stall a divorce, divide heirs, or leave thousands on the table when you sell. You deserve a value you can stand behind.</p>
+</div>
+<ol class="steps">
+<li><span class="step-n" aria-hidden="true">01</span><div><div class="step-t">Free consultation</div><div>Tell me about your situation. I'll explain the process and give you an exact quote.</div></div></li>
+<li><span class="step-n" aria-hidden="true">02</span><div><div class="step-t">On-site inspection</div><div>A 30-60 minute visit to gather what I need for an accurate value.</div></div></li>
+<li><span class="step-n" aria-hidden="true">03</span><div><div class="step-t">Your report</div><div>Thorough and court-ready, typically within a few days of the inspection.</div></div></li>
+</ol>
+</div>
+</section>
+
+<section class="sec" id="ben" aria-labelledby="ben-h">
+<div class="wrap">
+<div class="ben-card">
+<div class="ben-photo">
+<img src="images/ben-goheen.jpg" alt="Ben Goheen, Minnesota Certified Residential Appraiser, with family and friends" width="1292" height="1437" loading="lazy">
+<span class="sticker">Hi, I'm Ben</span>
+</div>
+<div class="ben-text">
+<h2 id="ben-h">When you call, you get a human</h2>
+<p>I work for you, not a lender. That means getting to know what makes your home, your neighborhood and your market special, and giving you a number you can feel confident about.</p>
+<p>Questions about your report? I take the time to answer them.</p>
+<p class="cred">Minnesota Certified Residential Appraiser, License #20303548</p>
+<div class="ben-actions">
+<a href="/about" class="btn btn-navy">More about me</a>
+<a href="mailto:hello&#64;metrowide.co" class="link">hello&#64;metrowide.co &rarr;</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec" style="padding-top:0" aria-labelledby="faq-h">
+<div class="wrap faq">
+<h2 class="h-xl" id="faq-h">Got questions?</h2>
+<div class="faq-list">
+<details name="faq" open>
+<summary>How much does an appraisal cost?</summary>
+<p>A typical single-family home, townhome or condo appraisal is $550. Complex properties (unique design, acreage or multi-family) may cost more. Call for an exact quote.</p>
+</details>
+<details name="faq">
+<summary>What affects my home's value?</summary>
+<p>Recent comparable sales in your area, your home's size, condition and location, current market trends, and any upgrades or renovations.</p>
+</details>
+<details name="faq">
+<summary>How do I prepare for the inspection?</summary>
+<p>Appraisers focus on objective data, but a clean, well-kept home still helps. Make sure every area is easy to get to, take care of small repairs, and have a list of recent updates ready.</p>
+</details>
+<details name="faq">
+<summary>How long does it take?</summary>
+<p>The on-site visit usually takes 30-60 minutes. Your report is often ready within a few days, depending on the property.</p>
+</details>
+<details name="faq">
+<summary>Is an appraisal the same as a home inspection?</summary>
+<p>No. An appraisal estimates market value. A home inspection checks for structural or mechanical issues. They serve different purposes.</p>
+</details>
+<details name="faq">
+<summary>Can I use an old appraisal?</summary>
+<p>Most legal cases need an appraisal from the last 6 months. If the market has changed, you'll need an updated report.</p>
+</details>
+</div>
+</div>
+</section>
+
+<section class="final-cta" aria-labelledby="final-h">
+<div class="wrap">
+<span class="kicker">Still have questions?</span>
+<h2 id="final-h">Let's figure out your number</h2>
+<p>Tell me what's going on. I'll tell you what you need, what it costs and how fast you'll have it.</p>
+<div class="actions">
+<a href="/calendar" class="btn btn-navy">Schedule my free consult</a>
+<a href="tel:6515054400" class="btn btn-white">651-505-4400</a>
+</div>
+</div>
+</section>
+
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-cols">
+<div class="foot-col">
+<div class="foot-h">Services</div>
+<svg class="squig" viewBox="0 0 120 16" aria-hidden="true" focusable="false"><path d="M2 8 Q12 0 22 8 T42 8 T62 8 T82 8 T102 8 T122 8"></path></svg>
+<ul><li><a href="/divorce-appraisal">Divorce appraisal</a></li><li><a href="/estate-appraisal">Estate appraisal</a></li><li><a href="/selling-your-home">Selling your home</a></li><li><a href="/pmi-removal-appraisal">PMI removal appraisal</a></li><li><a href="/tax-appeal-appraisal">Tax appeal appraisal</a></li></ul>
+</div>
+<div class="foot-col">
+<div class="foot-h">About</div>
+<svg class="squig" viewBox="0 0 120 16" aria-hidden="true" focusable="false"><path d="M2 8 Q12 0 22 8 T42 8 T62 8 T82 8 T102 8 T122 8"></path></svg>
+<ul><li><a href="/about">About Ben</a></li><li><a href="/blog">Blog</a></li><li><a href="/service-area">Areas served</a></li><li><a href="/privacy">Privacy policy</a></li></ul>
+</div>
+<div class="foot-col">
+<div class="foot-h">Say hello</div>
+<svg class="squig" viewBox="0 0 120 16" aria-hidden="true" focusable="false"><path d="M2 8 Q12 0 22 8 T42 8 T62 8 T82 8 T102 8 T122 8"></path></svg>
+<ul><li><a href="tel:6515054400">651-505-4400</a></li><li><a href="mailto:hello&#64;metrowide.co">hello&#64;metrowide.co</a></li><li>Serving the Twin Cities metro</li><li class="copy">&copy; 2026 Metrowide Appraisals</li></ul>
+</div>
+</div>
+<a href="/" class="foot-logo" aria-label="Metrowide Appraisals home"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M21.7 69.8 A40 40 0 1 1 78.3 69.8 L50 98.1 Z" fill="#FF4F1A"></path><path d="M47 25.4 L5 67.4 M66.3 44.7 L20 91" fill="none" stroke="#0C1538" stroke-width="6.5" stroke-linecap="round"></path></svg><span class="logo-text"><span class="logo-word">Metrowide</span><span class="logo-sub">APPRAISALS</span></span></a>
+</div>
+</footer>
+<div class="callbar">
+<a href="tel:6515054400" aria-label="Call 651-505-4400">651-505-4400</a>
+<a href="/calendar" class="book">Free consult</a>
+</div>
+<script src="/js/site.js" defer></script>
 </body>
 </html>

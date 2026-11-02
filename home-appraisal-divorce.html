@@ -16,98 +16,9 @@
 <meta property="og:url" content="https://metrowide.co/home-appraisal-divorce">
 <meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@600;700&display=swap">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--dark:#0C1538;--dark-deep:#06082A;--dark-gradient:linear-gradient(180deg,#0C1538 0%,#06082A 100%);--pink:#CF1670;--pink-hover:#B0125F;--cyan:#4FBBD9;--mauve-start:#ECDDE7;--mauve-end:#F4ECF0;--white:#FFFFFF;--off-white:#F8F7FA;--text:#222;--text-light:#555;--text-on-dark:#B8C4D0;--font-display:'Lora',Georgia,serif;--font-body:'DM Sans',-apple-system,sans-serif;--max-w:1080px}
-html{scroll-behavior:smooth}
-body{font-family:var(--font-body);color:var(--text);background:var(--off-white);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;height:auto;display:block}
-a{color:var(--pink);text-decoration:underline;text-decoration-color:rgba(255,92,240,.3);text-underline-offset:2px}
-a:hover{text-decoration-color:var(--pink)}
-button{font-family:inherit;cursor:pointer;border:none}
-.wrap{max-width:var(--max-w);margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--dark);border-bottom:1px solid rgba(255,255,255,.05);transition:box-shadow .3s}
-.nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.4)}
-.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem);display:flex;align-items:center;justify-content:space-between;height:64px}
-.nav-logo img{height:38px;width:auto}
-.nav-logo,.nav-links a,.nav-phone,.hamburger{text-decoration:none}
-.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
-.nav-links a{color:var(--text-on-dark);font-size:.9rem;font-weight:400;transition:color .2s;text-decoration:none}
-.nav-links a:hover{color:var(--white)}
-.nav-links .dropdown{position:relative}
-.nav-links .dropdown-menu{position:absolute;top:calc(100% + 8px);left:-.75rem;background:var(--dark-deep);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:.5rem 0;min-width:180px;opacity:0;visibility:hidden;transform:translateY(4px);transition:all .2s;box-shadow:0 12px 32px rgba(0,0,0,.4)}
-.nav-links .dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
-.dropdown-menu a{display:block;padding:.55rem 1rem;font-size:.85rem}
-.nav-phone{color:var(--text-on-dark);font-weight:400;font-size:.9rem;white-space:nowrap;transition:color .2s}
-.nav-phone:hover{color:var(--white)}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;padding:4px}
-.hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
-.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--dark-deep);z-index:99;padding:2rem 1.5rem;overflow-y:auto}
-.mobile-menu.open{display:block}
-.mobile-menu a{display:block;color:var(--text-on-dark);font-size:1.05rem;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06);font-weight:400;text-decoration:none}
-.mobile-menu a:hover{color:var(--white)}
-.mobile-menu .sub-link{padding-left:1rem;font-size:.95rem;color:#8899AA}
-.mobile-menu .mobile-phone{display:inline-block;margin-top:1.5rem;color:var(--cyan);font-weight:700;font-size:1.1rem;border-bottom:none}
-.cta{display:inline-block;background:var(--pink);color:var(--white);font-weight:700;font-size:.95rem;padding:1rem 2.25rem;border-radius:8px;letter-spacing:.04em;text-transform:uppercase;transition:background .2s,transform .15s;text-align:center;text-decoration:none}
-.cta:hover{background:var(--pink-hover);transform:translateY(-1px)}
-.article-hero{padding-top:calc(64px + clamp(2rem,4vw,3rem));padding-bottom:clamp(2rem,4vw,3rem);background:var(--dark-gradient)}
-.article-hero .wrap{max-width:760px}
-.article-hero .breadcrumb{font-size:.82rem;color:#8899AA;margin-bottom:1rem}
-.article-hero .breadcrumb a{color:var(--text-on-dark);text-decoration:none}
-.article-hero .breadcrumb a:hover{color:var(--cyan)}
-.article-hero h1{font-family:var(--font-display);color:var(--white);font-size:clamp(1.8rem,4.5vw,3rem);line-height:1.15;letter-spacing:-0.015em;font-weight:700;margin-bottom:.75rem}
-.article-hero .article-meta{color:#8899AA;font-size:.85rem}
-.article-layout{display:grid;grid-template-columns:1fr 240px;gap:3rem;max-width:var(--max-w);margin:0 auto;padding:clamp(2rem,4vw,3rem) clamp(1.25rem,4vw,2.5rem)}
-.article-body{max-width:760px}
-.toc-mobile{display:none;background:var(--white);border:1px solid rgba(0,0,0,.06);border-radius:10px;padding:1rem 1.25rem;margin-bottom:2rem}
-.toc-mobile summary{font-weight:700;font-size:.9rem;color:var(--text);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
-.toc-mobile summary::after{content:'+';font-size:1.1rem;color:var(--pink)}
-.toc-mobile[open] summary::after{content:'\2212'}
-.toc-mobile ol{margin-top:.75rem;padding-left:1.25rem}
-.toc-mobile li{margin-bottom:.4rem}
-.toc-mobile a{font-size:.85rem;color:var(--text-light);text-decoration:none}
-.toc-mobile a:hover{color:var(--pink)}
-.toc-sidebar{position:sticky;top:84px;align-self:start}
-.toc-sidebar .toc-title{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--pink);margin-bottom:.75rem}
-.toc-sidebar ol{list-style:none;padding:0;border-left:2px solid rgba(0,0,0,.06)}
-.toc-sidebar li{margin-bottom:0}
-.toc-sidebar a{display:block;padding:.45rem 0 .45rem 1rem;font-size:.82rem;color:var(--text-light);text-decoration:none;border-left:2px solid transparent;margin-left:-2px;transition:color .2s,border-color .2s;line-height:1.35}
-.toc-sidebar a:hover{color:var(--text)}
-.toc-sidebar a.active{color:var(--pink);border-left-color:var(--pink);font-weight:700}
-.article-body h2{font-family:var(--font-display);font-size:clamp(1.2rem,2.5vw,1.6rem);color:var(--text);margin:2.5rem 0 1rem;line-height:1.3;scroll-margin-top:80px}
-.article-body h3{font-size:1.05rem;font-weight:700;color:var(--text);margin:2rem 0 .75rem}
-.article-body p{margin-bottom:1.25rem;font-size:1.05rem}
-.article-body strong{color:var(--dark)}
-.article-body .callout{background:var(--white);border-radius:10px;padding:1.5rem 1.75rem;margin:1.75rem 0;border-left:4px solid var(--pink);box-shadow:0 2px 8px rgba(0,0,0,.04)}
-.article-body .callout p{margin-bottom:.5rem}
-.article-body .callout p:last-child{margin-bottom:0}
-.article-body .example{background:linear-gradient(135deg,var(--mauve-start),var(--mauve-end));border-radius:10px;padding:1.5rem 1.75rem;margin:1.75rem 0}
-.article-body .example p{margin-bottom:.5rem}
-.article-body .example p:last-child{margin-bottom:0}
-.article-cta{background:var(--dark-gradient);border-radius:12px;padding:2.5rem;text-align:center;margin:3rem 0 1rem}
-.article-cta h2{font-family:var(--font-display);color:var(--white);font-size:clamp(1.2rem,3vw,1.6rem);margin:0 0 .5rem;scroll-margin-top:80px}
-.article-cta p{color:var(--text-on-dark);margin-bottom:1.5rem;font-size:1.05rem}
-.article-cta .cta{text-decoration:none}
-.footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding:2.5rem 0}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-left{font-size:.85rem;color:#8899AA}
-.footer-left a{color:var(--text-on-dark);text-decoration:none}
-.footer-left a:hover{color:var(--cyan)}
-.footer-right{display:flex;gap:2rem;font-size:.85rem}
-.footer-right a{color:var(--text-on-dark);text-decoration:none}
-.footer-right a:hover{color:var(--cyan)}
-@media(max-width:768px){
-  .nav-links{display:none}.nav-phone-desktop{display:none}.hamburger{display:flex}
-  .article-layout{grid-template-columns:1fr;gap:0}
-  .toc-sidebar{display:none}
-  .toc-mobile{display:block}
-  .footer-inner{flex-direction:column;text-align:center}
-}
-@media(min-width:769px){.toc-mobile{display:none}}
-h1,h2{text-wrap:balance}*:focus-visible{outline:2px solid var(--pink);outline-offset:2px;border-radius:2px}.skip-link{position:absolute;left:-9999px;top:0;background:var(--pink);color:var(--white);padding:.75rem 1rem;z-index:1000;text-decoration:none;font-weight:700;border-radius:0 0 6px 0}.skip-link:focus{left:0}.nav-links a[aria-current=page]{color:var(--white)}.pillar{transition:transform .2s ease}.pillar:hover{transform:translateY(-2px)}.review-card{transition:transform .2s ease,border-color .2s ease}.review-card:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.16)}.cta:active{transform:translateY(0) scale(.98)}.footer-inner{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:clamp(2rem,4vw,3.5rem);align-items:start;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.08)}.footer-brand{display:flex;flex-direction:column;gap:.65rem}.footer-brand img{height:42px;width:42px;margin-bottom:.4rem}.footer-brand a{color:var(--text-on-dark);font-size:.9rem;line-height:1.5;transition:color .2s}.footer-brand a:hover{color:var(--cyan)}.footer-col h4{font-family:var(--font-display);color:var(--white);font-size:.95rem;font-weight:700;margin-bottom:.85rem;letter-spacing:.01em}.footer-col a{display:block;color:var(--text-on-dark);font-size:.88rem;padding:.3rem 0;transition:color .2s}.footer-col a:hover{color:var(--cyan)}.footer-bottom{padding-top:1.5rem;font-size:.82rem;color:#7A8294;text-align:left}@media(max-width:768px){.footer-inner{grid-template-columns:1fr;gap:2rem;text-align:left;padding-bottom:1.5rem}.footer-bottom{text-align:left}}.final-cta p,.article-cta p,.hero-sub,.meet-ben-intro,.services-sub,.map-intro,.stat-desc{text-wrap:balance}</style>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&amp;family=Permanent+Marker&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"How to Get a Home Appraisal for Divorce: An Expert's Guide to Fair Value","author":{"@type":"Person","name":"Ben Goheen"},"publisher":{"@type":"Organization","name":"Metrowide Appraisals","url":"https://metrowide.co"},"datePublished":"2025-02-10","dateModified":"2025-02-10","description":"Expert strategies to ensure you get an accurate, defensible home valuation during divorce proceedings.","mainEntityOfPage":"https://metrowide.co/home-appraisal-divorce"}
 </script>
@@ -146,13 +57,36 @@ gtag("config","AW-1062322289/6YHqCNm5rKEdEPGAx_oD",{"phone_conversion_number":"6
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
-<nav class="nav" id="nav"><div class="nav-inner">
-<a href="/" class="nav-logo"><img src="images/Minnesota-home-appraisal.webp" alt="Metrowide Appraisals" width="38" height="38"></a>
-<ul class="nav-links"><li><a href="/">Home</a></li><li class="dropdown"><a href="#">Appraisal Types &#9662;</a><div class="dropdown-menu"><a href="/divorce-appraisal">Divorce</a><a href="/estate-appraisal">Estate</a><a href="/selling-your-home">Selling Your Home</a><a href="/pmi-removal-appraisal">PMI Removal</a><a href="/tax-appeal-appraisal">Tax Appeal</a></div></li><li><a href="/service-area">Service Area</a></li><li><a href="/blog">Blog</a></li><li><a href="/about">About</a></li></ul>
-<a href="tel:6515054400" class="nav-phone nav-phone-desktop">651-505-4400</a>
-<button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
-</div></nav>
-<div class="mobile-menu" id="mobileMenu"><a href="/">Home</a><a href="/divorce-appraisal" class="sub-link">Divorce Appraisal</a><a href="/estate-appraisal" class="sub-link">Estate Appraisal</a><a href="/selling-your-home" class="sub-link">Selling Your Home</a><a href="/pmi-removal-appraisal" class="sub-link">PMI Removal Appraisal</a><a href="/tax-appeal-appraisal" class="sub-link">Tax Appeal Appraisal</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/service-area">Service Area</a><a href="tel:6515054400" class="mobile-phone">651-505-4400</a></div>
+<header class="site-header" id="siteHeader">
+<div class="hdr">
+<a href="/" class="logo" aria-label="Metrowide Appraisals home"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M21.7 69.8 A40 40 0 1 1 78.3 69.8 L50 98.1 Z" fill="#FF4F1A"></path><path d="M47 25.4 L5 67.4 M66.3 44.7 L20 91" fill="none" stroke="#0C1538" stroke-width="6.5" stroke-linecap="round"></path></svg><span class="logo-text"><span class="logo-word">Metrowide</span><span class="logo-sub">APPRAISALS</span></span></a>
+<nav aria-label="Main">
+<ul class="nav">
+<li class="nav-drop"><button type="button" class="nav-drop-btn" aria-expanded="false" aria-haspopup="true">Appraisal types <svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><div class="nav-drop-menu"><a href="/divorce-appraisal">Divorce / separation</a><a href="/estate-appraisal">Estate &amp; probate</a><a href="/selling-your-home">Selling your home</a><a href="/pmi-removal-appraisal">PMI removal</a><a href="/tax-appeal-appraisal">Tax appeal</a></div></li>
+<li><a href="/service-area">Areas served</a></li>
+<li><a href="/#reviews">Reviews</a></li>
+<li><a href="/blog">Blog</a></li>
+<li><a href="/about">About</a></li>
+</ul>
+</nav>
+<a href="tel:6515054400" class="hdr-phone">651-505-4400</a>
+<div class="hdr-mob">
+<a href="tel:6515054400" class="icon-btn call" aria-label="Call 651-505-4400"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"></path></svg></a>
+<button type="button" class="icon-btn menu" id="menuBtn" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path></svg></button>
+</div>
+</div>
+<nav class="mnav" id="mnav" aria-label="Mobile">
+<a href="/">Home</a>
+<a class="sub" href="/divorce-appraisal">Divorce / separation</a><a class="sub" href="/estate-appraisal">Estate &amp; probate</a><a class="sub" href="/selling-your-home">Selling your home</a><a class="sub" href="/pmi-removal-appraisal">PMI removal</a><a class="sub" href="/tax-appeal-appraisal">Tax appeal</a>
+<a href="/service-area">Areas served</a>
+<a href="/#reviews">Reviews</a>
+<a href="/blog">Blog</a>
+<a href="/about">About</a>
+<a href="tel:6515054400" class="mnav-call">Call 651-505-4400</a>
+</nav>
+</header>
+<main>
+
 
 <header id="main" class="article-hero"><div class="wrap">
 <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog">Blog</a> &rsaquo; Home Appraisal for Divorce</div>
@@ -284,46 +218,33 @@ gtag("config","AW-1062322289/6YHqCNm5rKEdEPGAx_oD",{"phone_conversion_number":"6
 </aside>
 
 </div>
-
-<footer class="footer"><div class="wrap">
-<div class="footer-inner">
-<div class="footer-brand">
-<img src="images/Minnesota-home-appraisal.webp" alt="Metrowide Appraisals" width="42" height="42">
-<a href="tel:6515054400">651-505-4400</a>
-<a href="mailto:hello&#64;metrowide.co">hello&#64;metrowide.co</a>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-cols">
+<div class="foot-col">
+<div class="foot-h">Services</div>
+<svg class="squig" viewBox="0 0 120 16" aria-hidden="true" focusable="false"><path d="M2 8 Q12 0 22 8 T42 8 T62 8 T82 8 T102 8 T122 8"></path></svg>
+<ul><li><a href="/divorce-appraisal">Divorce appraisal</a></li><li><a href="/estate-appraisal">Estate appraisal</a></li><li><a href="/selling-your-home">Selling your home</a></li><li><a href="/pmi-removal-appraisal">PMI removal appraisal</a></li><li><a href="/tax-appeal-appraisal">Tax appeal appraisal</a></li></ul>
 </div>
-<div class="footer-col">
-<h4>Services</h4>
-<a href="/divorce-appraisal">Divorce Appraisal</a>
-<a href="/estate-appraisal">Estate Appraisal</a>
-<a href="/tax-appeal-appraisal">Tax Appeal Appraisal</a>
-<a href="/pmi-removal-appraisal">PMI Removal Appraisal</a>
-<a href="/selling-your-home">Selling Your Home</a>
+<div class="foot-col">
+<div class="foot-h">About</div>
+<svg class="squig" viewBox="0 0 120 16" aria-hidden="true" focusable="false"><path d="M2 8 Q12 0 22 8 T42 8 T62 8 T82 8 T102 8 T122 8"></path></svg>
+<ul><li><a href="/about">About Ben</a></li><li><a href="/blog">Blog</a></li><li><a href="/service-area">Areas served</a></li><li><a href="/privacy">Privacy policy</a></li></ul>
 </div>
-<div class="footer-col">
-<h4>About</h4>
-<a href="/about">About</a>
-<a href="/blog">Blog</a>
-<a href="/service-area">Service Area</a>
-<a href="/privacy">Privacy Policy</a>
+<div class="foot-col">
+<div class="foot-h">Say hello</div>
+<svg class="squig" viewBox="0 0 120 16" aria-hidden="true" focusable="false"><path d="M2 8 Q12 0 22 8 T42 8 T62 8 T82 8 T102 8 T122 8"></path></svg>
+<ul><li><a href="tel:6515054400">651-505-4400</a></li><li><a href="mailto:hello&#64;metrowide.co">hello&#64;metrowide.co</a></li><li>Serving the Twin Cities metro</li><li class="copy">&copy; 2026 Metrowide Appraisals</li></ul>
 </div>
 </div>
-<div class="footer-bottom">&copy; 2026 Metrowide Appraisals. All rights reserved.</div>
-</div></footer>
-
-<script>
-(function(){
-  var nav=document.getElementById('nav');
-  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>20)},{passive:true});
-  var hamburger=document.getElementById('hamburger');
-  var mobileMenu=document.getElementById('mobileMenu');
-  hamburger.addEventListener('click',function(){
-    mobileMenu.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded',mobileMenu.classList.contains('open'));
-  });
-  var mLinks=mobileMenu.querySelectorAll('a');
-  for(var i=0;i<mLinks.length;i++){mLinks[i].addEventListener('click',function(){mobileMenu.classList.remove('open')})}
-})();
-</script>
+<a href="/" class="foot-logo" aria-label="Metrowide Appraisals home"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M21.7 69.8 A40 40 0 1 1 78.3 69.8 L50 98.1 Z" fill="#FF4F1A"></path><path d="M47 25.4 L5 67.4 M66.3 44.7 L20 91" fill="none" stroke="#0C1538" stroke-width="6.5" stroke-linecap="round"></path></svg><span class="logo-text"><span class="logo-word">Metrowide</span><span class="logo-sub">APPRAISALS</span></span></a>
+</div>
+</footer>
+<div class="callbar">
+<a href="tel:6515054400" aria-label="Call 651-505-4400">651-505-4400</a>
+<a href="/calendar" class="book">Free consult</a>
+</div>
+<script src="/js/site.js" defer></script>
 </body>
 </html>
