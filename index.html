@@ -24,14 +24,23 @@
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .tag{background:var(--cream)}
 .rating .g{width:20px;height:20px;flex-shrink:0}
-.band{background:var(--orange);color:var(--navy);overflow:hidden;padding:15px 0;font-family:var(--f-display);font-size:22px;letter-spacing:1px;text-transform:uppercase;line-height:1.2}
+.band{background:var(--cream);color:var(--navy);border-bottom:2px solid rgba(12,21,56,.12);overflow:hidden;padding:15px 0;font-family:var(--f-display);font-size:22px;letter-spacing:1px;text-transform:uppercase;line-height:1.2}
 .band-track{display:flex;width:max-content;animation:mw-band 70s linear infinite}
 .band:hover .band-track{animation-play-state:paused}
+.band .star{color:var(--orange)}
+/* hero: white headline, one orange phrase, so the button is the loudest orange on screen */
+.hero h1{color:var(--white)}
+.hero h1 .hl{color:var(--orange)}
+.btn-hero{box-shadow:0 0 0 4px rgba(255,79,26,.25);padding:20px 36px}
+.btn-hero .nudge{display:inline-block;animation:mw-nudge 1.6s ease-in-out infinite}
+@keyframes mw-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+.icon-btn.call{background:transparent;border:2px solid var(--white);color:var(--white)}
+@media (max-width:760px){.btn-hero{padding:19px 16px;font-size:21px;gap:8px;white-space:nowrap}}
 .band-grp{display:flex;flex-shrink:0;white-space:nowrap}
 .band-grp span{margin-right:30px}
 @keyframes mw-band{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (max-width:760px){.band{font-size:18px;padding:12px 0}.band-track{animation-duration:55s}}
-@media (prefers-reduced-motion:reduce){.band-track{animation:none}}
+@media (prefers-reduced-motion:reduce){.band-track,.btn-hero .nudge{animation:none}}
 </style>
 <script type="application/ld+json">
 {
@@ -247,10 +256,10 @@ gtag("config","AW-1062322289/6YHqCNm5rKEdEPGAx_oD",{"phone_conversion_number":"6
 <section class="hero" aria-labelledby="hero-h">
 <div class="hero-copy">
 <span class="kicker">An honest answer on</span>
-<h1 id="hero-h">What's your home really worth?</h1>
-<p class="hero-sub">Independent appraisals for divorce, estates and selling in the Twin Cities. Built for you, not a bank.</p>
+<h1 id="hero-h">What's your home <span class="hl">really worth?</span></h1>
+<p class="hero-sub">The real number, from someone who's walked through your home.</p>
 <div class="hero-actions">
-<a href="/calendar" class="btn btn-lg">Schedule my free consult</a>
+<a href="/calendar" class="btn btn-lg btn-hero">Schedule my free consult <span class="nudge" aria-hidden="true">&rarr;</span></a>
 <a href="tel:6515054400" class="hero-call">or call 651-505-4400</a>
 </div>
 <a href="https://maps.app.goo.gl/CwZ1ora6D4khSx4t9" target="_blank" rel="noopener" class="rating">
@@ -274,7 +283,7 @@ gtag("config","AW-1062322289/6YHqCNm5rKEdEPGAx_oD",{"phone_conversion_number":"6
 </div>
 <div class="band">
 <p class="sr-only">3-5 day turnaround, 25 years local, Court-ready reports, No sales pressure</p>
-<div class="band-track" aria-hidden="true"><div class="band-grp"><span>3-5 day turnaround</span><span>&#9733;</span><span>25 years local</span><span>&#9733;</span><span>Court-ready reports</span><span>&#9733;</span><span>No sales pressure</span><span>&#9733;</span><span>3-5 day turnaround</span><span>&#9733;</span><span>25 years local</span><span>&#9733;</span><span>Court-ready reports</span><span>&#9733;</span><span>No sales pressure</span><span>&#9733;</span><span>3-5 day turnaround</span><span>&#9733;</span><span>25 years local</span><span>&#9733;</span><span>Court-ready reports</span><span>&#9733;</span><span>No sales pressure</span><span>&#9733;</span></div><div class="band-grp"><span>3-5 day turnaround</span><span>&#9733;</span><span>25 years local</span><span>&#9733;</span><span>Court-ready reports</span><span>&#9733;</span><span>No sales pressure</span><span>&#9733;</span><span>3-5 day turnaround</span><span>&#9733;</span><span>25 years local</span><span>&#9733;</span><span>Court-ready reports</span><span>&#9733;</span><span>No sales pressure</span><span>&#9733;</span><span>3-5 day turnaround</span><span>&#9733;</span><span>25 years local</span><span>&#9733;</span><span>Court-ready reports</span><span>&#9733;</span><span>No sales pressure</span><span>&#9733;</span></div></div>
+<div class="band-track" aria-hidden="true"><div class="band-grp"><span>3-5 day turnaround</span><span class="star">&#9733;</span><span>25 years local</span><span class="star">&#9733;</span><span>Court-ready reports</span><span class="star">&#9733;</span><span>No sales pressure</span><span class="star">&#9733;</span><span>3-5 day turnaround</span><span class="star">&#9733;</span><span>25 years local</span><span class="star">&#9733;</span><span>Court-ready reports</span><span class="star">&#9733;</span><span>No sales pressure</span><span class="star">&#9733;</span><span>3-5 day turnaround</span><span class="star">&#9733;</span><span>25 years local</span><span class="star">&#9733;</span><span>Court-ready reports</span><span class="star">&#9733;</span><span>No sales pressure</span><span class="star">&#9733;</span></div><div class="band-grp"><span>3-5 day turnaround</span><span class="star">&#9733;</span><span>25 years local</span><span class="star">&#9733;</span><span>Court-ready reports</span><span class="star">&#9733;</span><span>No sales pressure</span><span class="star">&#9733;</span><span>3-5 day turnaround</span><span class="star">&#9733;</span><span>25 years local</span><span class="star">&#9733;</span><span>Court-ready reports</span><span class="star">&#9733;</span><span>No sales pressure</span><span class="star">&#9733;</span><span>3-5 day turnaround</span><span class="star">&#9733;</span><span>25 years local</span><span class="star">&#9733;</span><span>Court-ready reports</span><span class="star">&#9733;</span><span>No sales pressure</span><span class="star">&#9733;</span></div></div>
 </div>
 
 
