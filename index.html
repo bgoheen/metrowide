@@ -19,6 +19,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&amp;family=Permanent+Marker&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/site.css">
+<style>
+/* homepage only */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.tag{background:var(--cream)}
+.rating .g{width:20px;height:20px;flex-shrink:0}
+.band{background:var(--orange);color:var(--navy);overflow:hidden;padding:15px 0;font-family:var(--f-display);font-size:22px;letter-spacing:1px;text-transform:uppercase;line-height:1.2}
+.band-track{display:flex;width:max-content;animation:mw-band 70s linear infinite}
+.band:hover .band-track{animation-play-state:paused}
+.band-grp{display:flex;flex-shrink:0;white-space:nowrap}
+.band-grp span{margin-right:30px}
+@keyframes mw-band{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (max-width:760px){.band{font-size:18px;padding:12px 0}.band-track{animation-duration:55s}}
+@media (prefers-reduced-motion:reduce){.band-track{animation:none}}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -199,7 +213,6 @@ gtag("config","AW-1062322289/6YHqCNm5rKEdEPGAx_oD",{"phone_conversion_number":"6
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
-<div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Divorce</span><span aria-hidden="true">/</span><span>Estate &amp; probate</span><span aria-hidden="true">/</span><span>Selling your home</span><span aria-hidden="true">/</span><span>3-5 day turnaround</span><span aria-hidden="true">/</span><span>4.7 stars on Google</span><span aria-hidden="true">/</span><span>Twin Cities since 2001</span><span aria-hidden="true">/</span><span>Divorce</span><span aria-hidden="true">/</span><span>Estate &amp; probate</span><span aria-hidden="true">/</span><span>Selling your home</span><span aria-hidden="true">/</span><span>3-5 day turnaround</span><span aria-hidden="true">/</span><span>4.7 stars on Google</span><span aria-hidden="true">/</span><span>Twin Cities since 2001</span><span aria-hidden="true">/</span></div></div>
 <header class="site-header" id="siteHeader">
 <div class="hdr">
 <a href="/" class="logo" aria-label="Metrowide Appraisals home"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M21.7 69.8 A40 40 0 1 1 78.3 69.8 L50 98.1 Z" fill="#FF4F1A"></path><path d="M47 25.4 L5 67.4 M66.3 44.7 L20 91" fill="none" stroke="#0C1538" stroke-width="6.5" stroke-linecap="round"></path></svg><span class="logo-text"><span class="logo-word">Metrowide</span><span class="logo-sub">APPRAISALS</span></span></a>
@@ -241,7 +254,7 @@ gtag("config","AW-1062322289/6YHqCNm5rKEdEPGAx_oD",{"phone_conversion_number":"6
 <a href="tel:6515054400" class="hero-call">or call 651-505-4400</a>
 </div>
 <a href="https://maps.app.goo.gl/CwZ1ora6D4khSx4t9" target="_blank" rel="noopener" class="rating">
-<span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"></path></svg><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"></path></svg><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"></path></svg><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"></path></svg><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"></path></svg></span>
+<svg class="g" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.58c2.08-1.92 3.28-4.74 3.28-8.1z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.58-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"></path><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"></path></svg><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"></path></svg><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"></path></svg><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"></path></svg><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"></path></svg><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"></path></svg></span>
 <strong>4.7</strong><span class="muted">from 63 Google reviews</span>
 </a>
 </div>
@@ -258,15 +271,12 @@ gtag("config","AW-1062322289/6YHqCNm5rKEdEPGAx_oD",{"phone_conversion_number":"6
 </div>
 </div>
 </section>
-<div class="proof">
-<ul>
-<li><svg class="check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12.5l5 5L20 6.5"></path></svg><span><strong>3-5 day</strong> turnaround</span></li>
-<li><svg class="check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12.5l5 5L20 6.5"></path></svg><span><strong>25 years</strong> local</span></li>
-<li><svg class="check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12.5l5 5L20 6.5"></path></svg><span><strong>Court-ready</strong> reports</span></li>
-<li><svg class="check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12.5l5 5L20 6.5"></path></svg><span><strong>No</strong> sales pressure</span></li>
-</ul>
 </div>
+<div class="band">
+<p class="sr-only">3-5 day turnaround, 25 years local, Court-ready reports, No sales pressure, 4.7 on Google</p>
+<div class="band-track" aria-hidden="true"><div class="band-grp"><span>3-5 day turnaround</span><span>&#9733;</span><span>25 years local</span><span>&#9733;</span><span>Court-ready reports</span><span>&#9733;</span><span>No sales pressure</span><span>&#9733;</span><span>4.7 on Google</span><span>&#9733;</span><span>3-5 day turnaround</span><span>&#9733;</span><span>25 years local</span><span>&#9733;</span><span>Court-ready reports</span><span>&#9733;</span><span>No sales pressure</span><span>&#9733;</span><span>4.7 on Google</span><span>&#9733;</span><span>3-5 day turnaround</span><span>&#9733;</span><span>25 years local</span><span>&#9733;</span><span>Court-ready reports</span><span>&#9733;</span><span>No sales pressure</span><span>&#9733;</span><span>4.7 on Google</span><span>&#9733;</span></div><div class="band-grp"><span>3-5 day turnaround</span><span>&#9733;</span><span>25 years local</span><span>&#9733;</span><span>Court-ready reports</span><span>&#9733;</span><span>No sales pressure</span><span>&#9733;</span><span>4.7 on Google</span><span>&#9733;</span><span>3-5 day turnaround</span><span>&#9733;</span><span>25 years local</span><span>&#9733;</span><span>Court-ready reports</span><span>&#9733;</span><span>No sales pressure</span><span>&#9733;</span><span>4.7 on Google</span><span>&#9733;</span><span>3-5 day turnaround</span><span>&#9733;</span><span>25 years local</span><span>&#9733;</span><span>Court-ready reports</span><span>&#9733;</span><span>No sales pressure</span><span>&#9733;</span><span>4.7 on Google</span><span>&#9733;</span></div></div>
 </div>
+
 
 <section class="sec" id="menu" aria-labelledby="menu-h">
 <div class="wrap">
