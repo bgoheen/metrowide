@@ -184,7 +184,7 @@ h1,h2,h3{text-wrap:balance}
 .snap-hike{right:0;top:0;width:53.85%;transform:rotate(5deg);z-index:1}
 .snap-bike{left:0;top:6.48%;width:55.77%;transform:rotate(-6deg);z-index:2}
 .snap-head{left:22.12%;top:47.62%;width:57.69%;transform:rotate(-1.5deg);z-index:3;box-shadow:8px 8px 0 var(--orange)}
-.snap-head img{object-position:43% 30%}
+.snap-head img{object-position:50% 20%}
 .snaps .sticker{right:1%;bottom:4.5%;top:auto;transform:rotate(6deg);z-index:4;font-size:clamp(16px,1.6vw,21px);padding:8px 15px}
 @media (max-width:520px){.snap{border-radius:11px}.snap img{border-radius:6px}.snap{box-shadow:4px 4px 0 rgba(12,21,56,.15)}.snap-head{box-shadow:6px 6px 0 var(--orange)}}
 .ben-text{flex:1 1 400px}
