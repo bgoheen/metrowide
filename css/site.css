@@ -409,3 +409,15 @@ h1,h2,h3{text-wrap:balance}
   .article-body{font-size:18px}
   .cal-box,.cal-container{min-height:760px;border-radius:24px}
 }
+/* inner hero that lines up with the homepage hero on desktop */
+.page-hero .kicker{transform-origin:left;font-size:clamp(20px,2.2vw,30px);margin-bottom:8px}
+@media (min-width:1000px){.hero-match{min-height:calc(min(28.5vw + 274px, 16.4vw + 432px, 688px) - 83.6px);display:flex;align-items:center;padding:24px 0 32px}.hero-match .wrap{width:100%}}
+/* appraiser card */
+.appraiser-card{display:flex;gap:24px;align-items:center;background:var(--white);border:3px solid var(--navy);border-radius:28px;padding:24px 28px;margin:32px 0}
+.appraiser-card img{width:112px;height:140px;flex-shrink:0;object-fit:cover;object-position:50% 20%;border-radius:18px;border:3px solid var(--navy);box-shadow:6px 6px 0 var(--orange);transform:rotate(-2deg)}
+.appraiser-card p{margin-bottom:8px}
+.appraiser-card p:last-child{margin-bottom:0}
+.ac-name{font-family:var(--f-display);font-size:28px;line-height:1;text-transform:uppercase}
+.ac-cred{font-size:15px;font-weight:600;color:var(--orange-deep)}
+.faq-inline{margin:0}
+@media (max-width:520px){.appraiser-card{flex-direction:column;align-items:flex-start;padding:22px}}
