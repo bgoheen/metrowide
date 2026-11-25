@@ -411,7 +411,7 @@ h1,h2,h3{text-wrap:balance}
 }
 /* inner hero that lines up with the homepage hero on desktop */
 .page-hero .kicker{transform-origin:left;font-size:clamp(20px,2.2vw,30px);margin-bottom:8px}
-@media (min-width:1000px){.hero-match{min-height:calc(min(28.5vw + 274px, 16.4vw + 432px, 688px) - 83.6px);display:flex;align-items:center;padding:24px 0 32px}.hero-match .wrap{width:100%}}
+@media (min-width:1000px){.hero-match{min-height:calc(min(28.5vw + 274px, 16.4vw + 432px, 670px) - 83.6px);display:flex;align-items:center;padding:24px 0 32px}.hero-match .wrap{width:100%}}
 /* appraiser card */
 .appraiser-card{display:flex;gap:24px;align-items:center;background:var(--white);border:3px solid var(--navy);border-radius:28px;padding:24px 28px;margin:32px 0}
 .appraiser-card img{width:112px;height:140px;flex-shrink:0;object-fit:cover;object-position:50% 20%;border-radius:18px;border:3px solid var(--navy);box-shadow:6px 6px 0 var(--orange);transform:rotate(-2deg)}
