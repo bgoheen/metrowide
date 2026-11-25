@@ -421,3 +421,5 @@ h1,h2,h3{text-wrap:balance}
 .ac-cred{font-size:15px;font-weight:600;color:var(--orange-deep)}
 .faq-inline{margin:0}
 @media (max-width:520px){.appraiser-card{flex-direction:column;align-items:flex-start;padding:22px}}
+p,li,summary,blockquote,figcaption{text-wrap:pretty}
+.hero-match h1 em{display:block}
