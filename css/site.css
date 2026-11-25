@@ -424,3 +424,4 @@ h1,h2,h3{text-wrap:balance}
 p,li,summary,blockquote,figcaption{text-wrap:pretty}
 .hero-match h1 em{display:block}
 .hero-match h1.one-line em{display:inline}
+.hero-compact{padding:clamp(32px,4vw,56px) 0 clamp(40px,5vw,64px)}.hero-compact h1{font-size:clamp(44px,6vw,92px);max-width:none}
